@@ -50,7 +50,7 @@
 
     <header class="site-header" data-header>
       <nav class="nav-shell" aria-label="Primary navigation">
-        <a class="brand-mark" href="#top" aria-label="Abhey Deep home">
+        <a class="brand-mark" href="#top" aria-label="Abhey Deep home" data-logo-secret>
           <span class="brand-initials">AD</span>
           <span class="brand-name">Abhey Deep</span>
         </a>
@@ -61,6 +61,7 @@
 
         <div class="desktop-nav">
           <a href="#architecture">Architecture</a>
+          <a href="#notes">Notes</a>
           <a href="#experience">Experience</a>
           <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
@@ -74,6 +75,7 @@
 
       <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
         <a href="#architecture">Architecture</a>
+        <a href="#notes">Notes</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
@@ -85,9 +87,12 @@
       <section class="hero-section section-wrap" id="top">
         <div class="hero-copy">
           <p class="eyebrow">Senior Full-Stack Software Engineer</p>
-          <h1>Java systems engineer building modern product surfaces.</h1>
+          <h1>I build the parts people notice, and the parts they only notice when broken.</h1>
           <p class="hero-summary">
-            I design high-availability enterprise systems, tune Oracle-scale data paths, and ship modern full-stack products across Spring Boot, React, Next.js, PostgreSQL, Redis, and Docker.
+            Java, Spring Boot, Oracle-scale data paths, React, Next.js, PostgreSQL, Redis, Docker. My comfort zone is the useful middle ground between calm backend systems and interfaces that do not need a meeting to explain them.
+          </p>
+          <p class="builder-note">
+            Bias: boring in production, curious in design, merciless about latency.
           </p>
           <div class="hero-actions" aria-label="Primary actions">
             <a class="button button-primary" href="mailto:abheyarora6@gmail.com">
@@ -107,9 +112,9 @@
 
         <aside class="system-console" aria-label="Engineering snapshot">
           <div class="console-topbar">
-            <span></span>
-            <span></span>
-            <span></span>
+            <button type="button" class="console-dot red" aria-label="Console control" data-console-dot></button>
+            <button type="button" class="console-dot amber" aria-label="Console control" data-console-dot></button>
+            <button type="button" class="console-dot green" aria-label="Console control" data-console-dot></button>
           </div>
           <div class="console-grid">
             <div class="metric-tile">
@@ -129,13 +134,17 @@
               <span class="metric-label">Events processed per hour</span>
             </div>
           </div>
-          <pre aria-label="Architecture excerpt"><code>marketnews/
-  apps/public-portal     Next.js + JSON-LD
-  apps/admin-studio      React command center
-  services/core          Java 17 + Spring Boot
-  infra                  PostgreSQL + Redis + Docker</code></pre>
+          <pre aria-label="Architecture excerpt"><code>portfolio.audit()
+  signal: enterprise-scale Java, human-scale UI
+  rule: make failures legible before dashboards pretty
+  status: open to hard problems, suspicious of hand-wavy metrics</code></pre>
         </aside>
       </section>
+
+      <aside class="secret-panel section-wrap" data-secret-panel hidden>
+        <strong>Architect mode:</strong>
+        <span>Complexity now has to pay rent. Diagrams welcome, vague boxes billed hourly.</span>
+      </aside>
 
       <section class="proof-band" aria-label="Core engineering profile">
         <div>
@@ -149,6 +158,34 @@
         <div>
           <strong>Full-stack range</strong>
           <span>React, Next.js, Oracle JET, VBCS, design systems, and SEO-aware delivery.</span>
+        </div>
+      </section>
+
+      <section class="section-wrap note-section" id="notes">
+        <div class="section-heading compact">
+          <p class="eyebrow">Field Notes</p>
+          <h2>A few working beliefs, written before the coffee got cold.</h2>
+          <p>
+            Resumes compress the work. This is the part that says how I tend to think when the system is slow, the dashboard is noisy, and the deadline is not emotionally available.
+          </p>
+        </div>
+
+        <div class="notes-grid">
+          <article class="note-card">
+            <span>01</span>
+            <h3>Latency is UX wearing a backend jacket.</h3>
+            <p>Users rarely care which layer stalled. They just know the product hesitated.</p>
+          </article>
+          <article class="note-card">
+            <span>02</span>
+            <h3>The best admin tools feel slightly overprepared.</h3>
+            <p>Good internal software has receipts: clear states, useful defaults, and errors that point somewhere.</p>
+          </article>
+          <article class="note-card">
+            <span>03</span>
+            <h3>Architecture is a promise to future readers.</h3>
+            <p>If the diagram cannot survive the code review, it was decoration.</p>
+          </article>
         </div>
       </section>
 
@@ -177,7 +214,7 @@
               The backend is a modular Spring Boot monolith with clear internal boundaries for ingestion, clustering, technical validation, script generation, persistence, and administrative control.
             </p>
             <p>
-              The frontend deliberately separates public SEO delivery from private operational work: a Next.js portal publishes market digests, while a React admin studio supports authenticated editorial workflows.
+              The frontend deliberately separates public SEO delivery from private operational work: a Next.js portal publishes market digests, while a React admin studio supports authenticated editorial workflows. Simple where it can be, opinionated where it should be.
             </p>
           </div>
 
@@ -331,7 +368,7 @@
           <p class="eyebrow">Independent Engineering</p>
           <h2>System Diagnostics &amp; Performance Analyzer</h2>
           <p>
-            A Java utility for parsing application logs, SQL latencies, thread utilization, and memory patterns into AWR-style performance summaries without requiring DBA-level access.
+            A Java utility for parsing application logs, SQL latencies, thread utilization, and memory patterns into AWR-style performance summaries without requiring DBA-level access. Built for the moment when "it feels slower" needs evidence, not folklore.
           </p>
         </div>
         <div class="project-actions">
@@ -347,7 +384,7 @@
           <p class="eyebrow">Contact</p>
           <h2>Open to senior full-stack and backend-heavy product engineering roles.</h2>
           <p>
-            Based in India and open to relocation. Best fit: teams building enterprise platforms, data-heavy product systems, developer tools, or modern Java and React applications.
+            Based in India and open to relocation. Best fit: teams building enterprise platforms, data-heavy product systems, developer tools, or modern Java and React applications with taste, telemetry, and fewer mystery loading states.
           </p>
         </div>
         <div class="contact-actions">
@@ -370,7 +407,10 @@
     <footer class="site-footer">
       <span>Abhey Deep</span>
       <span>Senior Full-Stack Software Engineer</span>
-      <span>Built for static hosting.</span>
+      <button type="button" class="footer-secret" data-footer-secret>Built for static hosting.</button>
     </footer>
+
+    <div class="easter-toast" role="status" aria-live="polite" data-easter-toast></div>
+    <!-- Tiny source-view easter egg: type "shipit" or "latency" on the page. Tastefully, of course. -->
   </body>
 </html>

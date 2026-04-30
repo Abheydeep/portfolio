@@ -298,6 +298,13 @@ h3 {
   font-size: 1.08rem;
 }
 
+.builder-note {
+  max-width: 640px;
+  margin-bottom: 0;
+  color: #d7f7ef;
+  font-weight: 750;
+}
+
 .hero-actions,
 .contact-actions,
 .project-actions {
@@ -335,19 +342,27 @@ h3 {
   background: rgba(255, 255, 255, 0.04);
 }
 
-.console-topbar span {
+.console-dot {
   width: 10px;
   height: 10px;
+  padding: 0;
+  border: 0;
   border-radius: 999px;
+  cursor: pointer;
   background: var(--rose);
 }
 
-.console-topbar span:nth-child(2) {
+.console-dot.amber {
   background: var(--amber);
 }
 
-.console-topbar span:nth-child(3) {
+.console-dot.green {
   background: var(--green);
+}
+
+.console-dot:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.65);
+  outline-offset: 3px;
 }
 
 .console-grid {
@@ -425,9 +440,29 @@ pre {
   font-size: 0.94rem;
 }
 
+.secret-panel {
+  margin-top: -2.8rem;
+  margin-bottom: 4rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(250, 204, 21, 0.34);
+  border-radius: var(--radius);
+  background: rgba(42, 36, 13, 0.72);
+  color: #fff7cc;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.26);
+}
+
+.secret-panel[hidden] {
+  display: none;
+}
+
+.secret-panel strong {
+  margin-right: 0.4rem;
+}
+
 .split-section,
 #experience,
 .skills-section,
+.note-section,
 .project-strip,
 .contact-section {
   padding-top: 6rem;
@@ -440,6 +475,40 @@ pre {
 
 .section-heading.compact {
   max-width: 700px;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.note-card {
+  min-height: 250px;
+  padding: 1.35rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.025)),
+    var(--surface);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.note-card span {
+  display: inline-flex;
+  margin-bottom: 2.2rem;
+  color: var(--amber);
+  font: 800 0.86rem/1 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+.note-card h3 {
+  max-width: 260px;
+}
+
+.note-card p {
+  color: var(--muted);
 }
 
 .case-study {
@@ -701,6 +770,51 @@ pre {
   font-size: 0.9rem;
 }
 
+.footer-secret {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--dim);
+  font: inherit;
+  cursor: pointer;
+}
+
+.footer-secret:hover,
+.footer-secret:focus-visible {
+  color: var(--text);
+}
+
+.easter-toast {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 80;
+  width: min(360px, calc(100% - 2rem));
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(94, 234, 212, 0.34);
+  border-radius: var(--radius);
+  background: rgba(11, 15, 20, 0.92);
+  color: var(--text);
+  box-shadow: var(--shadow);
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.easter-toast.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.latency-mode .metric-value {
+  color: var(--amber);
+}
+
+.latency-mode .system-console {
+  border-color: rgba(250, 204, 21, 0.45);
+}
+
 :focus-visible {
   outline: 3px solid rgba(94, 234, 212, 0.5);
   outline-offset: 3px;
@@ -780,6 +894,7 @@ pre {
   }
 
   .proof-band,
+  .notes-grid,
   .feature-grid,
   .skills-grid,
   .timeline-item {
