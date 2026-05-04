@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Resume for Abhey Deep, Senior Full-Stack Software Engineer.">
+    <title>Abhey Deep | Resume</title>
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+    <style>
+      :root {
+        --ink: #111827;
+        --muted: #4b5563;
+        --line: #d7dde5;
+        --accent: #0369a1;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: #eef2f6;
+        line-height: 1.42;
+        letter-spacing: 0;
+      }
+
+      main {
+        width: min(100% - 24px, 920px);
+        margin: 24px auto;
+        padding: 38px 46px;
+        background: #fff;
+        box-shadow: 0 18px 55px rgba(15, 23, 42, 0.12);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        margin-bottom: 4px;
+        font-size: 32px;
+        line-height: 1.1;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        margin: 24px 0 10px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid var(--line);
+        color: var(--accent);
+        font-size: 15px;
+        letter-spacing: 0;
+      }
+
+      h3 {
+        margin-bottom: 2px;
+        font-size: 15px;
+      }
+
+      p,
+      li {
+        font-size: 13.2px;
+      }
+
+      ul {
+        margin: 7px 0 0;
+        padding-left: 18px;
+      }
+
+      li + li {
+        margin-top: 4px;
+      }
+
+      .topline,
+      .meta,
+      .date {
+        color: var(--muted);
+      }
+
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 12px;
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .resume-header {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 20px;
+        align-items: start;
+      }
+
+      .resume-logo {
+        width: 56px;
+        height: 56px;
+        border-radius: 10px;
+      }
+
+      .section-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 16px;
+        align-items: baseline;
+      }
+
+      .role {
+        margin-top: 14px;
+      }
+
+      .skills p {
+        margin-bottom: 6px;
+      }
+
+      .project-title {
+        margin-top: 12px;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .actions {
+        width: min(100% - 24px, 920px);
+        margin: 20px auto 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      button {
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        padding: 10px 14px;
+        background: #fff;
+        color: #111827;
+        font: inherit;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        main {
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          box-shadow: none;
+        }
+
+        .actions {
+          display: none;
+        }
+
+        h2 {
+          break-after: avoid;
+        }
+
+        .role,
+        .project {
+          break-inside: avoid;
+        }
+
+        .resume-logo {
+          print-color-adjust: exact;
+          -webkit-print-color-adjust: exact;
+        }
+      }
+
+      @media (max-width: 700px) {
+        main {
+          width: 100%;
+          margin: 0;
+          padding: 26px 18px;
+        }
+
+        .section-row {
+          grid-template-columns: 1fr;
+          gap: 2px;
+        }
+
+        .resume-header {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="actions">
+      <button type="button" onclick="window.print()">Print / Save PDF</button>
+    </div>
+
+    <main>
+      <header class="resume-header">
+        <div>
+          <h1>Abhey Deep</h1>
+          <p class="topline">Senior Full-Stack Software Engineer | 6+ Years Experience</p>
+          <div class="contact">
+            <span>+91-7986505489</span>
+            <span>abheyarora6@gmail.com</span>
+            <span>linkedin.com/in/abhey-deep</span>
+            <span>github.com/Abheydeep</span>
+            <span>India - Open to relocation</span>
+          </div>
+        </div>
+        <img class="resume-logo" src="assets/logo.svg" alt="Abhey Deep logo">
+      </header>
+
+      <section>
+        <h2>Professional Summary</h2>
+        <p>
+          Senior Software Engineer with over 6 years of experience architecting, designing, and delivering scalable, high-availability distributed systems. Deep expertise in Java, Spring Boot, microservices architecture, modern full-stack engineering with Next.js and React, and Oracle ecosystem frameworks. Proven track record optimizing high-throughput event-processing engines, driving enterprise UI modernization, and improving database execution paths across large-scale payroll and compensation datasets.
+        </p>
+      </section>
+
+      <section class="skills">
+        <h2>Technical Skills</h2>
+        <p><strong>Core Languages:</strong> Java 17, C++, Python, SQL, PL/SQL, JavaScript ES6+, TypeScript.</p>
+        <p><strong>Backend &amp; Architecture:</strong> Spring Boot, Spring MVC, REST APIs, microservices, event-driven architecture, concurrent programming, Kafka, OOP, SOLID.</p>
+        <p><strong>Frontend:</strong> React, Next.js, Oracle JET, VBCS, HTML5, CSS3, Web Components.</p>
+        <p><strong>Databases &amp; Caching:</strong> Oracle DB, PostgreSQL monthly partitioning, Supabase, Redis, SQL optimization, indexing, AWR reports, query execution plans.</p>
+        <p><strong>DevOps &amp; Practices:</strong> Docker, OCI, Render, Git/GitHub monorepos, Maven, Node.js, Helium CI/CD, JUnit, Mockito, TDD, Agile/Scrum.</p>
+      </section>
+
+      <section>
+        <h2>Professional Experience</h2>
+
+        <article class="role">
+          <div class="section-row">
+            <div>
+              <h3>Senior Software Engineer</h3>
+              <p class="meta">Oracle India Pvt. Ltd. - Gift City, India</p>
+            </div>
+            <p class="date">Jan 2024 - Present</p>
+          </div>
+          <ul>
+            <li>Optimized a high-scale event-driven payroll processing engine by redesigning Java thread-pool and batch-processing logic, driving a 25% throughput increase across 10K+ events/hour.</li>
+            <li>Architected RESTful APIs for payroll, absence, and compensation modules, enforcing versioning, pagination, and idempotency to reduce downstream integration latency by 40%.</li>
+            <li>Spearheaded Oracle Fusion HCM UI migration from legacy ADF to Redwood patterns by decomposing ADF managed beans into stateless services and building responsive VBCS pages with Oracle JET components.</li>
+            <li>Executed SQL/PL-SQL performance tuning with EXPLAIN PLAN and AWR reports, redesigning indexes and queries to deliver a 4x execution-time reduction on high-volume compensation datasets.</li>
+            <li>Established clean-code and design-pattern review practices across Strategy and Factory implementations, reducing post-release defect rates by approximately 30%.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <div class="section-row">
+            <div>
+              <h3>Software Engineer II</h3>
+              <p class="meta">Oracle India Pvt. Ltd.</p>
+            </div>
+            <p class="date">Nov 2021 - Dec 2023</p>
+          </div>
+          <ul>
+            <li>Developed resilient microservice-style processors for effective-dated HR changes, retroactive payroll calculations, and compensation workflows.</li>
+            <li>Enhanced UI performance through Oracle JET lazy loading and asynchronous JavaScript validations using VBCS action chains.</li>
+            <li>Containerized legacy backend services with Docker and automated deployment workflows via Helium CI/CD pipelines.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <div class="section-row">
+            <div>
+              <h3>Software Engineer</h3>
+              <p class="meta">Samsung Research Institute - Noida, India</p>
+            </div>
+            <p class="date">Jan 2019 - Nov 2021</p>
+          </div>
+          <ul>
+            <li>Engineered kernel-level Android charging features, including the Time-To-Full algorithm, improving charging visibility across flagship device lines.</li>
+            <li>Built Python and Java automation to parse raw device logs into queryable datasets, eliminating over 3 hours of daily manual log processing.</li>
+            <li>Extended the Charging Log Analyzer tool to support emerging charging IC datasets and speed cross-device debugging cycles.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section>
+        <h2>Architectural Projects &amp; Independent Engineering</h2>
+
+        <article class="project">
+          <h3 class="project-title">Market Narrative Storyboard Engine | marketnarrative.in | Java 17, Spring Boot, Next.js, React SPA, PostgreSQL, Redis, Docker</h3>
+          <ul>
+            <li>Architected and launched a production-grade automated financial media system as a monorepo aggregating market data, analyzing news sentiment, and publishing source-led pre-market intelligence.</li>
+            <li>Built a Java modular monolith backend integrated with a Next.js public archive optimized for SEO and a private React SPA administrative command center.</li>
+            <li>Engineered narrative clustering that groups financial news into actionable themes and evaluates technical setups for strict 1:2 risk-reward ratios.</li>
+            <li>Implemented PostgreSQL monthly partitioning, Redis caching for sub-minute quote-board updates, permission-claim based admin access, and public archive delivery at marketnarrative.in.</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <h3 class="project-title">The Win List (Habit Ledger) | Next.js 15, React 19, TypeScript, Tailwind CSS, Supabase, Render</h3>
+          <ul>
+            <li>Built a production daily-wins app for tracking must-do habits, monthly progress, daily notes, image exports, and editable win ordering across a polished responsive interface.</li>
+            <li>Designed a local-first architecture using browser storage as the instant source of truth with optional Supabase Auth, PostgreSQL, RLS, and backup/restore cloud sync.</li>
+            <li>Implemented a privacy-conscious consent boundary separating sync, analytics, recommendations, and ads personalization while excluding daily notes from segmentation.</li>
+            <li>Modeled aggregate launch metrics through an admin console gated by app_admins and RPC access, exposing adoption and storage signals without leaking user-level notes.</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <h3 class="project-title">System Diagnostics &amp; Performance Analyzer | Java, Docker, OCI, SQL</h3>
+          <ul>
+            <li>Built a backend Java utility to parse application logs, SQL execution latencies, thread utilization, and memory patterns into AWR-style performance summaries without DBA-level access.</li>
+            <li>Containerized the diagnostic engine with Docker and deployed it on OCI for scheduled anomaly detection and internal performance analytics.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <p><strong>B.E. Computer Engineering</strong> | Thapar Institute of Engineering &amp; Technology, Patiala (2015 - 2019)</p>
+        <p class="meta">CGPA 8.31/10 | Coursework: Data Structures &amp; Algorithms, Operating Systems, DBMS, Computer Networks, Distributed Systems.</p>
+      </section>
+    </main>
+  </body>
+</html>

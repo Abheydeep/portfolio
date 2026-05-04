@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Abhey Deep - Senior Full-Stack Software Engineer building calm Java systems, modern product surfaces, and performance-minded enterprise platforms.">
+    <meta name="theme-color" content="#080b0f">
+    <meta property="og:title" content="Abhey Deep | Senior Full-Stack Software Engineer">
+    <meta property="og:description" content="A hand-built engineering portfolio with case files, field notes, architecture sketches, and enterprise systems work across Java, Spring Boot, Oracle, React, and Next.js.">
+    <meta property="og:type" content="website">
+    <title>Abhey Deep | Senior Full-Stack Software Engineer</title>
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/styles.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <script src="assets/app.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Abhey Deep",
+        "jobTitle": "Senior Full-Stack Software Engineer",
+        "email": "mailto:abheyarora6@gmail.com",
+        "telephone": "+91-7986505489",
+        "url": "https://github.com/Abheydeep",
+        "sameAs": [
+          "https://linkedin.com/in/abhey-deep",
+          "https://github.com/Abheydeep"
+        ],
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Thapar Institute of Engineering & Technology"
+        },
+        "knowsAbout": [
+          "Java",
+          "Spring Boot",
+          "React",
+          "Next.js",
+          "Oracle Database",
+          "PL/SQL",
+          "PostgreSQL",
+          "Supabase",
+          "Redis",
+          "Docker",
+          "Distributed Systems",
+          "System Design"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="brand-mark" href="#top" aria-label="Abhey Deep home" data-logo-secret>
+          <img class="brand-logo" src="assets/logo.svg" alt="" aria-hidden="true">
+          <span class="brand-copy">
+            <strong>Abhey Deep</strong>
+            <small>field log / portfolio</small>
+          </span>
+        </a>
+
+        <button class="icon-button nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu" data-nav-toggle>
+          <i data-lucide="menu" aria-hidden="true"></i>
+        </button>
+
+        <div class="desktop-nav">
+          <a href="#brief">Brief</a>
+          <a href="#case-file">Case files</a>
+          <a href="#work-log">Work log</a>
+          <a href="#notes">Notes</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <a class="button button-outline desktop-cta" href="resume.html" target="_blank" rel="noopener">
+          <i data-lucide="file-text" aria-hidden="true"></i>
+          <span>Resume</span>
+        </a>
+      </nav>
+
+      <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+        <a href="#brief">Brief</a>
+        <a href="#case-file">Case files</a>
+        <a href="#work-log">Work log</a>
+        <a href="#notes">Notes</a>
+        <a href="#contact">Contact</a>
+        <a href="resume.html" target="_blank" rel="noopener">Resume</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero-lab section-wrap" id="top">
+        <div class="hero-copy">
+          <p class="kicker">Revision 04.30.2026 / senior full-stack engineer</p>
+          <h1>Systems that stay calm when the room gets loud.</h1>
+          <p class="hero-summary">
+            I build Java and Spring Boot backends that keep payroll, compensation, and market data moving; then I give them React and Next.js surfaces people can actually operate without a map and a prayer.
+          </p>
+          <div class="signal-row" aria-label="Engineering highlights">
+            <span>25% throughput gain</span>
+            <span>4x SQL speedup</span>
+            <span>10K+ events/hour</span>
+          </div>
+          <div class="hero-actions">
+            <a class="button button-solid" href="mailto:abheyarora6@gmail.com">
+              <i data-lucide="send" aria-hidden="true"></i>
+              <span>Start a thread</span>
+            </a>
+            <a class="button button-outline" href="#case-file">
+              <i data-lucide="route" aria-hidden="true"></i>
+              <span>Read the case file</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="workbench" aria-label="Interactive system sketch">
+          <div class="bench-head">
+            <span>signal-map.canvas</span>
+            <button type="button" class="mini-button" data-redraw-map>redraw</button>
+          </div>
+          <canvas id="signal-map" width="840" height="620" aria-hidden="true"></canvas>
+          <div class="bench-note">
+            <strong>Workbench note</strong>
+            <span>Follow the lines: data in, decisions out, fewer mysteries in the middle.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="console-strip section-wrap" aria-label="Site command console">
+        <label for="site-command">site console</label>
+        <div class="console-input-wrap">
+          <span aria-hidden="true">$</span>
+          <input id="site-command" type="text" autocomplete="off" spellcheck="false" placeholder="try: latency, shipit, coffee, oracle, wins" data-command-input>
+          <button type="button" class="mini-button" data-command-run>run</button>
+        </div>
+        <p data-command-output>Small surface area, useful surprises. The console is mostly harmless.</p>
+      </section>
+
+      <section class="brief section-wrap" id="brief">
+        <div class="brief-copy">
+          <p class="kicker">Operating brief</p>
+          <h2>I like systems with evidence: traces, query plans, state transitions, and UI copy that admits what is happening.</h2>
+        </div>
+        <div class="brief-ledger">
+          <div>
+            <span>01</span>
+            <strong>Backend first does not mean user last.</strong>
+            <p>Latency, retries, pagination, and idempotency are product decisions wearing infrastructure clothes.</p>
+          </div>
+          <div>
+            <span>02</span>
+            <strong>Modernization is archaeology with a deploy button.</strong>
+            <p>Respect the old system enough to understand it. Then make the next person need less courage.</p>
+          </div>
+          <div>
+            <span>03</span>
+            <strong>Dashboards should not be apology letters.</strong>
+            <p>If a screen needs a meeting to explain, the system is leaking complexity into the room.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-file section-wrap" id="case-file">
+        <div class="section-heading">
+          <p class="kicker">Case file / MarketNews</p>
+          <h2>Market Narrative Storyboard Engine</h2>
+          <p>
+            A financial media engine built as a monorepo and now live as <a href="https://marketnarrative.in/" target="_blank" rel="noopener">Market Narrative</a>: Java 17 and Spring Boot at the core, Next.js for public digest delivery, React for the admin studio, PostgreSQL for time-series persistence, and Redis for fast quote-board reads.
+          </p>
+          <div class="project-links case-links" aria-label="Market Narrative project links">
+            <a class="button button-solid" href="https://marketnarrative.in/" target="_blank" rel="noopener">
+              <i data-lucide="external-link" aria-hidden="true"></i>
+              <span>Open live archive</span>
+            </a>
+            <a class="button button-outline" href="https://github.com/Abheydeep/marketNews" target="_blank" rel="noopener">
+              <i data-lucide="git-branch" aria-hidden="true"></i>
+              <span>Read source</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="dossier">
+          <div class="dossier-sidebar">
+            <span class="stamp">reviewed by future me</span>
+            <h3>Why it matters</h3>
+            <p>
+              It shows the useful range: ingestion, concurrency, clustering, deterministic content generation, SEO-aware publishing, and operational admin tooling in one system.
+            </p>
+            <div class="dossier-tabs" role="tablist" aria-label="MarketNews architecture views">
+              <button type="button" role="tab" aria-selected="true" aria-controls="panel-context" id="tab-context" data-diagram-tab="context">Context</button>
+              <button type="button" role="tab" aria-selected="false" aria-controls="panel-containers" id="tab-containers" data-diagram-tab="containers">Containers</button>
+              <button type="button" role="tab" aria-selected="false" aria-controls="panel-components" id="tab-components" data-diagram-tab="components">Components</button>
+            </div>
+          </div>
+
+          <div class="diagram-board">
+            <div class="diagram-panel is-active" id="panel-context" role="tabpanel" aria-labelledby="tab-context" data-diagram-panel="context">
+              <div class="diagram-node person">public reader</div>
+              <div class="diagram-line"></div>
+              <div class="diagram-node system">MarketNews platform</div>
+              <div class="diagram-line split"></div>
+              <div class="diagram-row">
+                <div class="diagram-node source">market feeds</div>
+                <div class="diagram-node source">news stories</div>
+                <div class="diagram-node source">admin studio</div>
+              </div>
+            </div>
+
+            <div class="diagram-panel" id="panel-containers" role="tabpanel" aria-labelledby="tab-containers" data-diagram-panel="containers" hidden>
+              <div class="diagram-row">
+                <div class="diagram-node web">Next.js portal</div>
+                <div class="diagram-node web">React admin SPA</div>
+              </div>
+              <div class="diagram-line"></div>
+              <div class="diagram-node system">Java 17 Spring Boot modular monolith</div>
+              <div class="diagram-line split"></div>
+              <div class="diagram-row">
+                <div class="diagram-node data">PostgreSQL monthly partitions</div>
+                <div class="diagram-node data">Redis quote cache</div>
+              </div>
+            </div>
+
+            <div class="diagram-panel" id="panel-components" role="tabpanel" aria-labelledby="tab-components" data-diagram-panel="components" hidden>
+              <div class="diagram-row three">
+                <div class="diagram-node system">ingestion manager</div>
+                <div class="diagram-node system">narrative clusterer</div>
+                <div class="diagram-node system">technical scanner</div>
+              </div>
+              <div class="diagram-line split"></div>
+              <div class="diagram-row">
+                <div class="diagram-node data">script generator</div>
+                <div class="diagram-node data">prompt package builder</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="evidence-grid" aria-label="MarketNews evidence">
+          <article>
+            <span>monorepo</span>
+            <p>Public archive, admin studio, backend core, trading dashboard, and infrastructure evolve together without pretending every boundary needs a network hop.</p>
+          </article>
+          <article>
+            <span>partitioned data</span>
+            <p>Monthly PostgreSQL partitions keep financial histories queryable as daily bars and news events accumulate.</p>
+          </article>
+          <article>
+            <span>deterministic output</span>
+            <p>Source-led briefings, rule-based clustering, and 1:2 risk-reward validation produce repeatable market narratives instead of black-box hand waving.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="product-file section-wrap" id="win-list">
+        <div class="section-heading">
+          <p class="kicker">Case file / The Win List</p>
+          <h2>A daily wins product that treats consistency like a ledger, not a motivational poster.</h2>
+          <p>
+            Habit Ledger became <a href="https://www.mywinlist.com/" target="_blank" rel="noopener">The Win List</a>: a production Next.js app for tracking today&apos;s must-do wins, reviewing monthly momentum, and syncing only when the user explicitly asks for the cloud to remember.
+          </p>
+        </div>
+
+        <div class="product-case">
+          <div class="product-copy">
+            <span class="stamp">live product / receipts included</span>
+            <h3>The Win List</h3>
+            <p>
+              A local-first habit and daily planning app tuned for working professionals in India. It keeps the first interaction fast with browser storage, adds optional Supabase backup and restore, and exposes launch metrics without turning private notes into dashboard confetti.
+            </p>
+            <div class="project-links" aria-label="The Win List project links">
+              <a class="button button-solid" href="https://www.mywinlist.com/" target="_blank" rel="noopener">
+                <i data-lucide="external-link" aria-hidden="true"></i>
+                <span>Open product</span>
+              </a>
+              <a class="button button-outline" href="https://github.com/Abheydeep/Habit-Ledger/tree/codex/personalized-onboarding" target="_blank" rel="noopener">
+                <i data-lucide="git-branch" aria-hidden="true"></i>
+                <span>Read branch</span>
+              </a>
+            </div>
+            <div class="proof-tags" aria-label="The Win List stack">
+              <span>Next.js 15</span>
+              <span>React 19</span>
+              <span>TypeScript</span>
+              <span>Tailwind CSS</span>
+              <span>Supabase</span>
+              <span>Render</span>
+            </div>
+          </div>
+
+          <div class="ledger-flow" aria-label="The Win List architecture sketch">
+            <div class="flow-node ui">
+              <strong>today&apos;s wins</strong>
+              <span>track, note, export</span>
+            </div>
+            <div class="flow-arrow" aria-hidden="true"></div>
+            <div class="flow-node local">
+              <strong>browser ledger</strong>
+              <span>fast local source</span>
+            </div>
+            <div class="flow-split" aria-hidden="true"></div>
+            <div class="flow-row">
+              <div class="flow-node cloud">
+                <strong>Supabase sync</strong>
+                <span>Auth, Postgres, RLS</span>
+              </div>
+              <div class="flow-node admin">
+                <strong>admin metrics</strong>
+                <span>aggregate launch view</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="evidence-grid win-evidence" aria-label="The Win List evidence">
+          <article>
+            <span>consent boundary</span>
+            <p>Sync, analytics, recommendations, and ads personalization are separate choices. Daily notes stay out of segmentation.</p>
+          </article>
+          <article>
+            <span>launch architecture</span>
+            <p>Supabase handles v1 auth, storage, PostgreSQL, RLS, and generated APIs; Spring Boot is reserved for heavier future services.</p>
+          </article>
+          <article>
+            <span>personalization QA</span>
+            <p>Onboarding test cases map sample answers to expected wins, avatar briefs, and daily logs so future personalization has a yardstick.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="work-log section-wrap" id="work-log">
+        <div class="section-heading">
+          <p class="kicker">Work log</p>
+          <h2>Enterprise engineering, recorded as changes that survived production.</h2>
+        </div>
+
+        <div class="logbook">
+          <article class="log-entry">
+            <time>Jan 2024 - Present</time>
+            <div>
+              <span class="hash">oracle/hcm/payroll</span>
+              <h3>Senior Software Engineer - Oracle India Pvt. Ltd.</h3>
+              <ul>
+                <li>Redesigned Java thread-pool and batch-processing logic for a payroll event engine, improving throughput by 25% across 10K+ events per hour.</li>
+                <li>Built Spring REST APIs for payroll, absence, and compensation modules with versioning, pagination, and idempotent behavior.</li>
+                <li>Tuned PL/SQL paths with EXPLAIN PLAN, AWR reports, indexing changes, and query rewrites to cut execution time by 4x.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="log-entry">
+            <time>Nov 2021 - Dec 2023</time>
+            <div>
+              <span class="hash">oracle/hcm/modernization</span>
+              <h3>Software Engineer II - Oracle India Pvt. Ltd.</h3>
+              <ul>
+                <li>Built resilient processors for effective-dated HR changes, retro payroll calculations, and compensation workflows.</li>
+                <li>Improved Oracle JET and VBCS performance through lazy loading and asynchronous validation flows.</li>
+                <li>Containerized backend services and automated releases through Helium CI/CD pipelines.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="log-entry">
+            <time>Jan 2019 - Nov 2021</time>
+            <div>
+              <span class="hash">samsung/android/power</span>
+              <h3>Software Engineer - Samsung Research Institute</h3>
+              <ul>
+                <li>Engineered kernel-level Android charging features, including the Time-To-Full algorithm for flagship device lines.</li>
+                <li>Created Python and Java log automation that removed 3+ hours of daily manual hardware debugging work.</li>
+                <li>Extended Charging Log Analyzer support for emerging charging IC datasets and cross-device diagnosis.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="field-notes section-wrap" id="notes">
+        <div class="section-heading narrow">
+          <p class="kicker">Field notes</p>
+          <h2>Small beliefs collected from large systems.</h2>
+        </div>
+        <div class="notes-wall">
+          <article>
+            <span>query plan margin note</span>
+            <p>When a report is slow, the database is not being dramatic. It is telling you where the story bends.</p>
+          </article>
+          <article>
+            <span>admin UI margin note</span>
+            <p>The best internal tools feel like someone stayed late and removed three future Slack threads.</p>
+          </article>
+          <article>
+            <span>architecture margin note</span>
+            <p>Boxes are cheap. Boundaries are expensive. Draw fewer and mean them.</p>
+          </article>
+          <article>
+            <span>deployment margin note</span>
+            <p>A release that is boring at 6 PM is a design achievement.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="tool-index section-wrap" id="skills">
+        <div>
+          <p class="kicker">Tool index</p>
+          <h2>Tools I reach for when the system needs to stop guessing.</h2>
+        </div>
+        <dl>
+          <div>
+            <dt>Backend</dt>
+            <dd>Java 17, Spring Boot, Spring MVC, REST APIs, microservices, event-driven architecture, Kafka, concurrency, SOLID.</dd>
+          </div>
+          <div>
+            <dt>Frontend</dt>
+            <dd>React, Next.js, Oracle JET, VBCS, TypeScript, JavaScript ES6+, HTML5, CSS3, responsive UI systems.</dd>
+          </div>
+          <div>
+            <dt>Data</dt>
+            <dd>Oracle DB, PostgreSQL partitioning, Redis, PL/SQL, SQL optimization, indexing, AWR reports, execution plans.</dd>
+          </div>
+          <div>
+            <dt>Delivery</dt>
+            <dd>Docker, OCI, GitHub monorepos, Maven, Node.js, Helium CI/CD, JUnit, Mockito, TDD, Agile/Scrum.</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="contact-panel section-wrap" id="contact">
+        <div>
+          <p class="kicker">Available for the right hard problem</p>
+          <h2>Senior full-stack, backend-heavy product engineering, enterprise modernization, and systems with a pulse.</h2>
+          <p>
+            Based in India and open to relocation. Especially interested in teams that care about performance, product craft, and codebases people can still understand on a Thursday evening.
+          </p>
+        </div>
+        <div class="contact-actions">
+          <a class="button button-solid" href="mailto:abheyarora6@gmail.com">
+            <i data-lucide="mail" aria-hidden="true"></i>
+            <span>Email</span>
+          </a>
+          <a class="button button-outline" href="https://linkedin.com/in/abhey-deep" target="_blank" rel="noopener">
+            <i data-lucide="briefcase-business" aria-hidden="true"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a class="button button-quiet" href="https://github.com/Abheydeep" target="_blank" rel="noopener">
+            <i data-lucide="git-branch" aria-hidden="true"></i>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span class="footer-brand">
+        <img class="footer-logo" src="assets/logo.svg" alt="Abhey Deep logo">
+        <span>Abhey Deep</span>
+      </span>
+      <button type="button" data-footer-secret>built slowly enough to have opinions</button>
+      <span>Static site. Non-static taste.</span>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite" data-toast></div>
+    <!-- Source-view note: try the console commands, then tap the AD stamp three times. -->
+  </body>
+</html>
