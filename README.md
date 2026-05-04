@@ -4,6 +4,13 @@
 
 Static portfolio and resume package for Abhey Deep, Senior Full-Stack Software Engineer.
 
+Live portfolio: <https://abheydeep.github.io/portfolio/>
+
+Flagship projects:
+
+- Market Narrative: <https://marketnarrative.in/> / <https://github.com/Abheydeep/marketNews>
+- The Win List: <https://www.mywinlist.com/> / <https://github.com/Abheydeep/Habit-Ledger/tree/codex/personalized-onboarding>
+
 ## Files
 
 - `index.html` - main portfolio page with MarketNews and The Win List architecture case studies.
