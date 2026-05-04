@@ -65,9 +65,9 @@
         </button>
 
         <div class="desktop-nav">
+          <a href="#work-log">Work log</a>
           <a href="#brief">Brief</a>
           <a href="#case-file">Case files</a>
-          <a href="#work-log">Work log</a>
           <a href="#notes">Notes</a>
           <a href="#contact">Contact</a>
         </div>
@@ -79,9 +79,9 @@
       </nav>
 
       <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+        <a href="#work-log">Work log</a>
         <a href="#brief">Brief</a>
         <a href="#case-file">Case files</a>
-        <a href="#work-log">Work log</a>
         <a href="#notes">Notes</a>
         <a href="#contact">Contact</a>
         <a href="resume.html" target="_blank" rel="noopener">Resume</a>
@@ -134,6 +134,54 @@
           <button type="button" class="mini-button" data-command-run>run</button>
         </div>
         <p data-command-output>Small surface area, useful surprises. The console is mostly harmless.</p>
+      </section>
+
+      <section class="work-log section-wrap" id="work-log">
+        <div class="section-heading">
+          <p class="kicker">Work log</p>
+          <h2>Enterprise engineering, recorded as changes that survived production.</h2>
+        </div>
+
+        <div class="logbook">
+          <article class="log-entry">
+            <time>Jan 2024 - Present</time>
+            <div>
+              <span class="hash">oracle/hcm/payroll</span>
+              <h3>Senior Software Engineer - Oracle India Pvt. Ltd.</h3>
+              <ul>
+                <li>Redesigned Java thread-pool and batch-processing logic for a payroll event engine, improving throughput by 25% across 10K+ events per hour.</li>
+                <li>Built Spring REST APIs for payroll, absence, and compensation modules with versioning, pagination, and idempotent behavior.</li>
+                <li>Tuned PL/SQL paths with EXPLAIN PLAN, AWR reports, indexing changes, and query rewrites to cut execution time by 4x.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="log-entry">
+            <time>Nov 2021 - Dec 2023</time>
+            <div>
+              <span class="hash">oracle/hcm/modernization</span>
+              <h3>Software Engineer II - Oracle India Pvt. Ltd.</h3>
+              <ul>
+                <li>Built resilient processors for effective-dated HR changes, retro payroll calculations, and compensation workflows.</li>
+                <li>Improved Oracle JET and VBCS performance through lazy loading and asynchronous validation flows.</li>
+                <li>Containerized backend services and automated releases through Helium CI/CD pipelines.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="log-entry">
+            <time>Jan 2019 - Nov 2021</time>
+            <div>
+              <span class="hash">samsung/android/power</span>
+              <h3>Software Engineer - Samsung Research Institute</h3>
+              <ul>
+                <li>Engineered kernel-level Android charging features, including the Time-To-Full algorithm for flagship device lines.</li>
+                <li>Created Python and Java log automation that removed 3+ hours of daily manual hardware debugging work.</li>
+                <li>Extended Charging Log Analyzer support for emerging charging IC datasets and cross-device diagnosis.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section class="brief section-wrap" id="brief">
@@ -323,54 +371,6 @@
           <article>
             <span>personalization QA</span>
             <p>Onboarding test cases map sample answers to expected wins, avatar briefs, and daily logs so future personalization has a yardstick.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="work-log section-wrap" id="work-log">
-        <div class="section-heading">
-          <p class="kicker">Work log</p>
-          <h2>Enterprise engineering, recorded as changes that survived production.</h2>
-        </div>
-
-        <div class="logbook">
-          <article class="log-entry">
-            <time>Jan 2024 - Present</time>
-            <div>
-              <span class="hash">oracle/hcm/payroll</span>
-              <h3>Senior Software Engineer - Oracle India Pvt. Ltd.</h3>
-              <ul>
-                <li>Redesigned Java thread-pool and batch-processing logic for a payroll event engine, improving throughput by 25% across 10K+ events per hour.</li>
-                <li>Built Spring REST APIs for payroll, absence, and compensation modules with versioning, pagination, and idempotent behavior.</li>
-                <li>Tuned PL/SQL paths with EXPLAIN PLAN, AWR reports, indexing changes, and query rewrites to cut execution time by 4x.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="log-entry">
-            <time>Nov 2021 - Dec 2023</time>
-            <div>
-              <span class="hash">oracle/hcm/modernization</span>
-              <h3>Software Engineer II - Oracle India Pvt. Ltd.</h3>
-              <ul>
-                <li>Built resilient processors for effective-dated HR changes, retro payroll calculations, and compensation workflows.</li>
-                <li>Improved Oracle JET and VBCS performance through lazy loading and asynchronous validation flows.</li>
-                <li>Containerized backend services and automated releases through Helium CI/CD pipelines.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="log-entry">
-            <time>Jan 2019 - Nov 2021</time>
-            <div>
-              <span class="hash">samsung/android/power</span>
-              <h3>Software Engineer - Samsung Research Institute</h3>
-              <ul>
-                <li>Engineered kernel-level Android charging features, including the Time-To-Full algorithm for flagship device lines.</li>
-                <li>Created Python and Java log automation that removed 3+ hours of daily manual hardware debugging work.</li>
-                <li>Extended Charging Log Analyzer support for emerging charging IC datasets and cross-device diagnosis.</li>
-              </ul>
-            </div>
           </article>
         </div>
       </section>
