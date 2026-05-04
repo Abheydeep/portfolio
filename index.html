@@ -210,111 +210,128 @@
 
       <section class="case-file section-wrap" id="case-file">
         <div class="section-heading">
-          <p class="kicker">Case file / MarketNews</p>
-          <h2>Market Narrative Storyboard Engine</h2>
+          <p class="kicker">Flagship case files</p>
+          <h2>Shipped systems, explained by the decisions that made them work.</h2>
           <p>
-            A financial media engine built as a monorepo and now live as <a href="https://marketnarrative.in/" target="_blank" rel="noopener">Market Narrative</a>: Java 17 and Spring Boot at the core, Next.js for public digest delivery, React for the admin studio, PostgreSQL for time-series persistence, and Redis for fast quote-board reads.
+            Less postcard, more engineering receipt. Each case file shows the problem, architecture, tradeoff, result, and live proof so the important part does not hide behind a pretty screenshot.
           </p>
-          <div class="project-links case-links" aria-label="Market Narrative project links">
-            <a class="button button-solid" href="https://marketnarrative.in/" target="_blank" rel="noopener">
-              <i data-lucide="external-link" aria-hidden="true"></i>
-              <span>Open live archive</span>
-            </a>
-            <a class="button button-outline" href="https://github.com/Abheydeep/marketNews" target="_blank" rel="noopener">
-              <i data-lucide="git-branch" aria-hidden="true"></i>
-              <span>Read source</span>
-            </a>
-          </div>
         </div>
 
-        <div class="dossier">
-          <div class="dossier-sidebar">
-            <span class="stamp">reviewed by future me</span>
-            <h3>Why it matters</h3>
-            <p>
-              It shows the useful range: ingestion, concurrency, clustering, deterministic content generation, SEO-aware publishing, and operational admin tooling in one system.
-            </p>
-            <div class="dossier-tabs" role="tablist" aria-label="MarketNews architecture views">
-              <button type="button" role="tab" aria-selected="true" aria-controls="panel-context" id="tab-context" data-diagram-tab="context">Context</button>
-              <button type="button" role="tab" aria-selected="false" aria-controls="panel-containers" id="tab-containers" data-diagram-tab="containers">Containers</button>
-              <button type="button" role="tab" aria-selected="false" aria-controls="panel-components" id="tab-components" data-diagram-tab="components">Components</button>
+        <article class="case-study case-study-market">
+          <div class="case-study-header">
+            <div>
+              <span class="stamp">live archive / source available</span>
+              <p class="kicker">Case file 01 / Market Narrative</p>
+              <h3>Market Narrative Storyboard Engine</h3>
+              <p>
+                A financial media engine that turns overnight market signals, news stories, and technical setups into deterministic daily briefing packages.
+              </p>
+            </div>
+            <div class="project-links case-links" aria-label="Market Narrative project links">
+              <a class="button button-solid" href="https://marketnarrative.in/" target="_blank" rel="noopener">
+                <i data-lucide="external-link" aria-hidden="true"></i>
+                <span>Open live archive</span>
+              </a>
+              <a class="button button-outline" href="https://github.com/Abheydeep/marketNews" target="_blank" rel="noopener">
+                <i data-lucide="git-branch" aria-hidden="true"></i>
+                <span>Read source</span>
+              </a>
             </div>
           </div>
 
-          <div class="diagram-board">
-            <div class="diagram-panel is-active" id="panel-context" role="tabpanel" aria-labelledby="tab-context" data-diagram-panel="context">
-              <div class="diagram-node person">public reader</div>
-              <div class="diagram-line"></div>
-              <div class="diagram-node system">MarketNews platform</div>
-              <div class="diagram-line split"></div>
-              <div class="diagram-row">
-                <div class="diagram-node source">market feeds</div>
-                <div class="diagram-node source">news stories</div>
-                <div class="diagram-node source">admin studio</div>
-              </div>
+          <dl class="case-facts" aria-label="Market Narrative case study">
+            <div>
+              <dt>Problem</dt>
+              <dd>Daily market content usually arrives as scattered quotes, headlines, and chart notes. The useful narrative has to be assembled quickly, repeatably, and with fewer manual judgment leaks.</dd>
             </div>
-
-            <div class="diagram-panel" id="panel-containers" role="tabpanel" aria-labelledby="tab-containers" data-diagram-panel="containers" hidden>
-              <div class="diagram-row">
-                <div class="diagram-node web">Next.js portal</div>
-                <div class="diagram-node web">React admin SPA</div>
-              </div>
-              <div class="diagram-line"></div>
-              <div class="diagram-node system">Java 17 Spring Boot modular monolith</div>
-              <div class="diagram-line split"></div>
-              <div class="diagram-row">
-                <div class="diagram-node data">PostgreSQL monthly partitions</div>
-                <div class="diagram-node data">Redis quote cache</div>
-              </div>
+            <div>
+              <dt>Architecture</dt>
+              <dd>Java 17 and Spring Boot run the modular backend; Next.js publishes the public archive; React powers the admin studio; PostgreSQL monthly partitions and Redis keep time-series reads practical.</dd>
             </div>
+            <div>
+              <dt>Tradeoff</dt>
+              <dd>Kept it as a modular monolith instead of premature microservices, and used deterministic clustering plus risk-reward rules where auditability mattered more than theatrical AI magic.</dd>
+            </div>
+            <div>
+              <dt>Result</dt>
+              <dd>A live market archive with SEO-aware digests, repeatable reel-script generation, prompt packages, and a cleaner operating path from raw signal to publishable narrative.</dd>
+            </div>
+            <div>
+              <dt>Live proof</dt>
+              <dd><a href="https://marketnarrative.in/" target="_blank" rel="noopener">marketnarrative.in</a> is live, with the monorepo source available on GitHub for review.</dd>
+            </div>
+          </dl>
 
-            <div class="diagram-panel" id="panel-components" role="tabpanel" aria-labelledby="tab-components" data-diagram-panel="components" hidden>
-              <div class="diagram-row three">
-                <div class="diagram-node system">ingestion manager</div>
-                <div class="diagram-node system">narrative clusterer</div>
-                <div class="diagram-node system">technical scanner</div>
+          <div class="case-artifact">
+            <div class="dossier">
+              <div class="dossier-sidebar">
+                <h4>Architecture view</h4>
+                <p>
+                  The diagram is intentionally DOM-built: easy to scan, responsive, and less mysterious than an image pasted from a diagram tool at 1:17 AM.
+                </p>
+                <div class="dossier-tabs" role="tablist" aria-label="MarketNews architecture views">
+                  <button type="button" role="tab" aria-selected="true" aria-controls="panel-context" id="tab-context" data-diagram-tab="context">Context</button>
+                  <button type="button" role="tab" aria-selected="false" aria-controls="panel-containers" id="tab-containers" data-diagram-tab="containers">Containers</button>
+                  <button type="button" role="tab" aria-selected="false" aria-controls="panel-components" id="tab-components" data-diagram-tab="components">Components</button>
+                </div>
               </div>
-              <div class="diagram-line split"></div>
-              <div class="diagram-row">
-                <div class="diagram-node data">script generator</div>
-                <div class="diagram-node data">prompt package builder</div>
+
+              <div class="diagram-board">
+                <div class="diagram-panel is-active" id="panel-context" role="tabpanel" aria-labelledby="tab-context" data-diagram-panel="context">
+                  <div class="diagram-node person">public reader</div>
+                  <div class="diagram-line"></div>
+                  <div class="diagram-node system">MarketNews platform</div>
+                  <div class="diagram-line split"></div>
+                  <div class="diagram-row">
+                    <div class="diagram-node source">market feeds</div>
+                    <div class="diagram-node source">news stories</div>
+                    <div class="diagram-node source">admin studio</div>
+                  </div>
+                </div>
+
+                <div class="diagram-panel" id="panel-containers" role="tabpanel" aria-labelledby="tab-containers" data-diagram-panel="containers" hidden>
+                  <div class="diagram-row">
+                    <div class="diagram-node web">Next.js portal</div>
+                    <div class="diagram-node web">React admin SPA</div>
+                  </div>
+                  <div class="diagram-line"></div>
+                  <div class="diagram-node system">Java 17 Spring Boot modular monolith</div>
+                  <div class="diagram-line split"></div>
+                  <div class="diagram-row">
+                    <div class="diagram-node data">PostgreSQL monthly partitions</div>
+                    <div class="diagram-node data">Redis quote cache</div>
+                  </div>
+                </div>
+
+                <div class="diagram-panel" id="panel-components" role="tabpanel" aria-labelledby="tab-components" data-diagram-panel="components" hidden>
+                  <div class="diagram-row three">
+                    <div class="diagram-node system">ingestion manager</div>
+                    <div class="diagram-node system">narrative clusterer</div>
+                    <div class="diagram-node system">technical scanner</div>
+                  </div>
+                  <div class="diagram-line split"></div>
+                  <div class="diagram-row">
+                    <div class="diagram-node data">script generator</div>
+                    <div class="diagram-node data">prompt package builder</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="evidence-grid" aria-label="MarketNews evidence">
-          <article>
-            <span>monorepo</span>
-            <p>Public archive, admin studio, backend core, trading dashboard, and infrastructure evolve together without pretending every boundary needs a network hop.</p>
-          </article>
-          <article>
-            <span>partitioned data</span>
-            <p>Monthly PostgreSQL partitions keep financial histories queryable as daily bars and news events accumulate.</p>
-          </article>
-          <article>
-            <span>deterministic output</span>
-            <p>Source-led briefings, rule-based clustering, and 1:2 risk-reward validation produce repeatable market narratives instead of black-box hand waving.</p>
-          </article>
-        </div>
+        </article>
       </section>
 
       <section class="product-file section-wrap" id="win-list">
-        <div class="section-heading">
-          <p class="kicker">Case file / The Win List</p>
-          <h2>A daily wins product that treats consistency like a ledger, not a motivational poster.</h2>
-          <p>
-            Habit Ledger became <a href="https://www.mywinlist.com/" target="_blank" rel="noopener">The Win List</a>: a production Next.js app for tracking today&apos;s must-do wins, reviewing monthly momentum, and syncing only when the user explicitly asks for the cloud to remember.
-          </p>
-        </div>
-
-        <div class="product-case">
-          <div class="product-copy">
-            <span class="stamp">live product / receipts included</span>
-            <h3>The Win List</h3>
-            <p>
-              A local-first habit and daily planning app tuned for working professionals in India. It keeps the first interaction fast with browser storage, adds optional Supabase backup and restore, and exposes launch metrics without turning private notes into dashboard confetti.
-            </p>
+        <article class="case-study case-study-win">
+          <div class="case-study-header">
+            <div>
+              <span class="stamp">live product / receipts included</span>
+              <p class="kicker">Case file 02 / The Win List</p>
+              <h3>A daily wins product that treats consistency like a ledger, not a motivational poster.</h3>
+              <p>
+                Habit Ledger became <a href="https://www.mywinlist.com/" target="_blank" rel="noopener">The Win List</a>: a production Next.js app for tracking today&apos;s must-do wins, reviewing monthly momentum, and syncing only when the user explicitly asks for the cloud to remember.
+              </p>
+            </div>
             <div class="project-links" aria-label="The Win List project links">
               <a class="button button-solid" href="https://www.mywinlist.com/" target="_blank" rel="noopener">
                 <i data-lucide="external-link" aria-hidden="true"></i>
@@ -325,54 +342,71 @@
                 <span>Read branch</span>
               </a>
             </div>
-            <div class="proof-tags" aria-label="The Win List stack">
-              <span>Next.js 15</span>
-              <span>React 19</span>
-              <span>TypeScript</span>
-              <span>Tailwind CSS</span>
-              <span>Supabase</span>
-              <span>Render</span>
-            </div>
           </div>
 
-          <div class="ledger-flow" aria-label="The Win List architecture sketch">
-            <div class="flow-node ui">
-              <strong>today&apos;s wins</strong>
-              <span>track, note, export</span>
+          <dl class="case-facts" aria-label="The Win List case study">
+            <div>
+              <dt>Problem</dt>
+              <dd>Most habit tools turn a simple day into a ceremony. The product needed to make the next win obvious, keep reflection lightweight, and avoid punishing missed days.</dd>
             </div>
-            <div class="flow-arrow" aria-hidden="true"></div>
-            <div class="flow-node local">
-              <strong>browser ledger</strong>
-              <span>fast local source</span>
+            <div>
+              <dt>Architecture</dt>
+              <dd>Next.js 15, React 19, and TypeScript drive the app; browser storage keeps the first interaction instant; Supabase handles optional auth, Postgres backup, RLS, and launch metrics.</dd>
             </div>
-            <div class="flow-split" aria-hidden="true"></div>
-            <div class="flow-row">
-              <div class="flow-node cloud">
-                <strong>Supabase sync</strong>
-                <span>Auth, Postgres, RLS</span>
+            <div>
+              <dt>Tradeoff</dt>
+              <dd>Chose local-first data with explicit cloud sync instead of always-online persistence, and separated analytics choices from personal notes so growth metrics do not eat user trust.</dd>
+            </div>
+            <div>
+              <dt>Result</dt>
+              <dd>A live planning product with fast daily entry, monthly momentum review, export paths, optional backup and restore, and onboarding tests that keep personalization honest.</dd>
+            </div>
+            <div>
+              <dt>Live proof</dt>
+              <dd><a href="https://www.mywinlist.com/" target="_blank" rel="noopener">mywinlist.com</a> is live, with the active onboarding branch linked for implementation review.</dd>
+            </div>
+          </dl>
+
+          <div class="case-artifact product-case">
+            <div class="product-copy">
+              <h4>Operating model</h4>
+              <p>
+                The product keeps its promise by making the default path local and fast, then treating the cloud as a deliberate capability instead of a silent dependency.
+              </p>
+              <div class="proof-tags" aria-label="The Win List stack">
+                <span>Next.js 15</span>
+                <span>React 19</span>
+                <span>TypeScript</span>
+                <span>Tailwind CSS</span>
+                <span>Supabase</span>
+                <span>Render</span>
               </div>
-              <div class="flow-node admin">
-                <strong>admin metrics</strong>
-                <span>aggregate launch view</span>
+            </div>
+
+            <div class="ledger-flow" aria-label="The Win List architecture sketch">
+              <div class="flow-node ui">
+                <strong>today&apos;s wins</strong>
+                <span>track, note, export</span>
+              </div>
+              <div class="flow-arrow" aria-hidden="true"></div>
+              <div class="flow-node local">
+                <strong>browser ledger</strong>
+                <span>fast local source</span>
+              </div>
+              <div class="flow-split" aria-hidden="true"></div>
+              <div class="flow-row">
+                <div class="flow-node cloud">
+                  <strong>Supabase sync</strong>
+                  <span>Auth, Postgres, RLS</span>
+                </div>
+                <div class="flow-node admin">
+                  <strong>admin metrics</strong>
+                  <span>aggregate launch view</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="evidence-grid win-evidence" aria-label="The Win List evidence">
-          <article>
-            <span>consent boundary</span>
-            <p>Sync, analytics, recommendations, and ads personalization are separate choices. Daily notes stay out of segmentation.</p>
-          </article>
-          <article>
-            <span>launch architecture</span>
-            <p>Supabase handles v1 auth, storage, PostgreSQL, RLS, and generated APIs; Spring Boot is reserved for heavier future services.</p>
-          </article>
-          <article>
-            <span>personalization QA</span>
-            <p>Onboarding test cases map sample answers to expected wins, avatar briefs, and daily logs so future personalization has a yardstick.</p>
-          </article>
-        </div>
+        </article>
       </section>
 
       <section class="field-notes section-wrap" id="notes">
