@@ -21,7 +21,9 @@ const messages = {
   shipit: "Ship it, then watch the logs like a person who has met production before.",
   coffee: "Coffee ring added. Proof that this site was allegedly worked on after midnight.",
   oracle: "AWR reports, EXPLAIN PLAN, and the quiet joy of deleting a bad index assumption.",
-  help: "Commands: latency, shipit, coffee, oracle, reset."
+  wins: "The Win List rule: three honest wins beat seventeen decorative intentions.",
+  logo: "Logo note: AD secretly expands to architect, debug, deploy. Extremely convenient. Suspiciously so.",
+  help: "Commands: latency, shipit, coffee, oracle, wins, logo, reset."
 };
 
 const showToast = (message) => {
@@ -108,7 +110,8 @@ const drawSignalMap = () => {
     { label: "cluster", x: 360, y: 230, color: "#f3c969" },
     { label: "scanner", x: 540, y: 145, color: "#82aaff" },
     { label: "script", x: 610, y: 380, color: "#f3c969" },
-    { label: "portal", x: 760, y: 245, color: "#68d8c5" }
+    { label: "portal", x: 760, y: 245, color: "#68d8c5" },
+    { label: "wins", x: 430, y: 492, color: "#e36f64" }
   ];
 
   const lines = [
@@ -117,7 +120,9 @@ const drawSignalMap = () => {
     [2, 3],
     [2, 4],
     [3, 5],
-    [4, 5]
+    [4, 5],
+    [4, 6],
+    [6, 5]
   ];
 
   lines.forEach(([from, to], index) => {
@@ -221,7 +226,7 @@ if (logoSecret) {
   logoSecret.addEventListener("click", () => {
     logoClicks += 1;
     if (logoClicks === 3) {
-      showToast("AD stamp unlocked: the neatest architecture usually has messy notebooks behind it.");
+      showToast("AD stamp unlocked: architect, debug, deploy. Also: always document the weird part.");
       logoClicks = 0;
     }
   });
@@ -239,7 +244,7 @@ document.addEventListener("keydown", (event) => {
 
   keyBuffer = `${keyBuffer}${event.key.toLowerCase()}`.slice(-12);
 
-  ["latency", "shipit", "coffee", "oracle"].forEach((command) => {
+  ["latency", "shipit", "coffee", "oracle", "wins", "logo"].forEach((command) => {
     if (keyBuffer.endsWith(command)) {
       runCommand(command);
     }
@@ -247,4 +252,4 @@ document.addEventListener("keydown", (event) => {
 });
 
 drawSignalMap();
-console.info("Portfolio console commands: help, latency, shipit, coffee, oracle, reset.");
+console.info("Portfolio console commands: help, latency, shipit, coffee, oracle, wins, logo, reset.");

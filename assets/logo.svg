@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Abhey Deep systems stamp</title>
+  <desc id="desc">AD monogram shaped like a console prompt and checked-off ledger entry: architect, debug, deploy.</desc>
+  <defs>
+    <linearGradient id="paper" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#17202a"/>
+      <stop offset="1" stop-color="#080b0f"/>
+    </linearGradient>
+    <linearGradient id="ink" x1="13" y1="15" x2="50" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f3c969"/>
+      <stop offset="0.48" stop-color="#68d8c5"/>
+      <stop offset="1" stop-color="#82aaff"/>
+    </linearGradient>
+  </defs>
+  <rect x="5" y="5" width="54" height="54" rx="9" fill="url(#paper)" stroke="#f0efe7" stroke-opacity=".22"/>
+  <path d="M14 17h22c8 0 14 6 14 15s-6 15-14 15H14" fill="none" stroke="#f0efe7" stroke-opacity=".15" stroke-width="2"/>
+  <path d="M19 43 29.5 20 40 43m-15-8h11" fill="none" stroke="url(#ink)" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M39 20h1c8.2 0 13 5 13 12s-4.8 12-13 12h-3" fill="none" stroke="#68d8c5" stroke-width="4.2" stroke-linecap="round"/>
+  <path d="M13 16 20 22 13 28" fill="none" stroke="#f3c969" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M42 47l3.2 3.3L52 42" fill="none" stroke="#8bd17c" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12 52h13" stroke="#f0efe7" stroke-opacity=".5" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="47" cy="15" r="2" fill="#e36f64"/>
+</svg>

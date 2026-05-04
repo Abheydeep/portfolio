@@ -9,6 +9,7 @@
     <meta property="og:description" content="A hand-built engineering portfolio with case files, field notes, architecture sketches, and enterprise systems work across Java, Spring Boot, Oracle, React, and Next.js.">
     <meta property="og:type" content="website">
     <title>Abhey Deep | Senior Full-Stack Software Engineer</title>
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="assets/styles.css">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
     <script src="assets/app.js" defer></script>
@@ -37,6 +38,7 @@
           "Oracle Database",
           "PL/SQL",
           "PostgreSQL",
+          "Supabase",
           "Redis",
           "Docker",
           "Distributed Systems",
@@ -51,8 +53,8 @@
     <header class="site-header">
       <nav class="nav-shell" aria-label="Primary navigation">
         <a class="brand-mark" href="#top" aria-label="Abhey Deep home" data-logo-secret>
-          <span class="brand-stamp">AD</span>
-          <span>
+          <img class="brand-logo" src="assets/logo.svg" alt="" aria-hidden="true">
+          <span class="brand-copy">
             <strong>Abhey Deep</strong>
             <small>field log / portfolio</small>
           </span>
@@ -64,9 +66,9 @@
 
         <div class="desktop-nav">
           <a href="#brief">Brief</a>
-          <a href="#case-file">Case file</a>
-          <a href="#notes">Notes</a>
+          <a href="#case-file">Case files</a>
           <a href="#work-log">Work log</a>
+          <a href="#notes">Notes</a>
           <a href="#contact">Contact</a>
         </div>
 
@@ -78,9 +80,9 @@
 
       <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
         <a href="#brief">Brief</a>
-        <a href="#case-file">Case file</a>
-        <a href="#notes">Notes</a>
+        <a href="#case-file">Case files</a>
         <a href="#work-log">Work log</a>
+        <a href="#notes">Notes</a>
         <a href="#contact">Contact</a>
         <a href="resume.html" target="_blank" rel="noopener">Resume</a>
       </div>
@@ -128,7 +130,7 @@
         <label for="site-command">site console</label>
         <div class="console-input-wrap">
           <span aria-hidden="true">$</span>
-          <input id="site-command" type="text" autocomplete="off" spellcheck="false" placeholder="try: latency, shipit, coffee, oracle" data-command-input>
+          <input id="site-command" type="text" autocomplete="off" spellcheck="false" placeholder="try: latency, shipit, coffee, oracle, wins" data-command-input>
           <button type="button" class="mini-button" data-command-run>run</button>
         </div>
         <p data-command-output>Small surface area, useful surprises. The console is mostly harmless.</p>
@@ -239,27 +241,78 @@
         </div>
       </section>
 
-      <section class="field-notes section-wrap" id="notes">
-        <div class="section-heading narrow">
-          <p class="kicker">Field notes</p>
-          <h2>Small beliefs collected from large systems.</h2>
+      <section class="product-file section-wrap" id="win-list">
+        <div class="section-heading">
+          <p class="kicker">Case file / The Win List</p>
+          <h2>A daily wins product that treats consistency like a ledger, not a motivational poster.</h2>
+          <p>
+            Habit Ledger became <a href="https://www.mywinlist.com/" target="_blank" rel="noopener">The Win List</a>: a production Next.js app for tracking today&apos;s must-do wins, reviewing monthly momentum, and syncing only when the user explicitly asks for the cloud to remember.
+          </p>
         </div>
-        <div class="notes-wall">
+
+        <div class="product-case">
+          <div class="product-copy">
+            <span class="stamp">live product / receipts included</span>
+            <h3>The Win List</h3>
+            <p>
+              A local-first habit and daily planning app tuned for working professionals in India. It keeps the first interaction fast with browser storage, adds optional Supabase backup and restore, and exposes launch metrics without turning private notes into dashboard confetti.
+            </p>
+            <div class="project-links" aria-label="The Win List project links">
+              <a class="button button-solid" href="https://www.mywinlist.com/" target="_blank" rel="noopener">
+                <i data-lucide="external-link" aria-hidden="true"></i>
+                <span>Open product</span>
+              </a>
+              <a class="button button-outline" href="https://github.com/Abheydeep/Habit-Ledger/tree/codex/personalized-onboarding" target="_blank" rel="noopener">
+                <i data-lucide="git-branch" aria-hidden="true"></i>
+                <span>Read branch</span>
+              </a>
+            </div>
+            <div class="proof-tags" aria-label="The Win List stack">
+              <span>Next.js 15</span>
+              <span>React 19</span>
+              <span>TypeScript</span>
+              <span>Tailwind CSS</span>
+              <span>Supabase</span>
+              <span>Render</span>
+            </div>
+          </div>
+
+          <div class="ledger-flow" aria-label="The Win List architecture sketch">
+            <div class="flow-node ui">
+              <strong>today&apos;s wins</strong>
+              <span>track, note, export</span>
+            </div>
+            <div class="flow-arrow" aria-hidden="true"></div>
+            <div class="flow-node local">
+              <strong>browser ledger</strong>
+              <span>fast local source</span>
+            </div>
+            <div class="flow-split" aria-hidden="true"></div>
+            <div class="flow-row">
+              <div class="flow-node cloud">
+                <strong>Supabase sync</strong>
+                <span>Auth, Postgres, RLS</span>
+              </div>
+              <div class="flow-node admin">
+                <strong>admin metrics</strong>
+                <span>aggregate launch view</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="evidence-grid win-evidence" aria-label="The Win List evidence">
           <article>
-            <span>query plan margin note</span>
-            <p>When a report is slow, the database is not being dramatic. It is telling you where the story bends.</p>
+            <span>consent boundary</span>
+            <p>Sync, analytics, recommendations, and ads personalization are separate choices. Daily notes stay out of segmentation.</p>
           </article>
           <article>
-            <span>admin UI margin note</span>
-            <p>The best internal tools feel like someone stayed late and removed three future Slack threads.</p>
+            <span>launch architecture</span>
+            <p>Supabase handles v1 auth, storage, PostgreSQL, RLS, and generated APIs; Spring Boot is reserved for heavier future services.</p>
           </article>
           <article>
-            <span>architecture margin note</span>
-            <p>Boxes are cheap. Boundaries are expensive. Draw fewer and mean them.</p>
-          </article>
-          <article>
-            <span>deployment margin note</span>
-            <p>A release that is boring at 6 PM is a design achievement.</p>
+            <span>personalization QA</span>
+            <p>Onboarding test cases map sample answers to expected wins, avatar briefs, and daily logs so future personalization has a yardstick.</p>
           </article>
         </div>
       </section>
@@ -312,6 +365,31 @@
         </div>
       </section>
 
+      <section class="field-notes section-wrap" id="notes">
+        <div class="section-heading narrow">
+          <p class="kicker">Field notes</p>
+          <h2>Small beliefs collected from large systems.</h2>
+        </div>
+        <div class="notes-wall">
+          <article>
+            <span>query plan margin note</span>
+            <p>When a report is slow, the database is not being dramatic. It is telling you where the story bends.</p>
+          </article>
+          <article>
+            <span>admin UI margin note</span>
+            <p>The best internal tools feel like someone stayed late and removed three future Slack threads.</p>
+          </article>
+          <article>
+            <span>architecture margin note</span>
+            <p>Boxes are cheap. Boundaries are expensive. Draw fewer and mean them.</p>
+          </article>
+          <article>
+            <span>deployment margin note</span>
+            <p>A release that is boring at 6 PM is a design achievement.</p>
+          </article>
+        </div>
+      </section>
+
       <section class="tool-index section-wrap" id="skills">
         <div>
           <p class="kicker">Tool index</p>
@@ -351,11 +429,11 @@
             <span>Email</span>
           </a>
           <a class="button button-outline" href="https://linkedin.com/in/abhey-deep" target="_blank" rel="noopener">
-            <i data-lucide="linkedin" aria-hidden="true"></i>
+            <i data-lucide="briefcase-business" aria-hidden="true"></i>
             <span>LinkedIn</span>
           </a>
           <a class="button button-quiet" href="https://github.com/Abheydeep" target="_blank" rel="noopener">
-            <i data-lucide="github" aria-hidden="true"></i>
+            <i data-lucide="git-branch" aria-hidden="true"></i>
             <span>GitHub</span>
           </a>
         </div>
@@ -363,7 +441,10 @@
     </main>
 
     <footer class="site-footer">
-      <span>Abhey Deep</span>
+      <span class="footer-brand">
+        <img class="footer-logo" src="assets/logo.svg" alt="Abhey Deep logo">
+        <span>Abhey Deep</span>
+      </span>
       <button type="button" data-footer-secret>built slowly enough to have opinions</button>
       <span>Static site. Non-static taste.</span>
     </footer>

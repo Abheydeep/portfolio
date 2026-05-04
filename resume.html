@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Resume for Abhey Deep, Senior Full-Stack Software Engineer.">
     <title>Abhey Deep | Resume</title>
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
     <style>
       :root {
         --ink: #111827;
@@ -91,6 +92,19 @@
         font-size: 13px;
       }
 
+      .resume-header {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 20px;
+        align-items: start;
+      }
+
+      .resume-logo {
+        width: 56px;
+        height: 56px;
+        border-radius: 10px;
+      }
+
       .section-row {
         display: grid;
         grid-template-columns: minmax(0, 1fr) auto;
@@ -156,6 +170,11 @@
         .project {
           break-inside: avoid;
         }
+
+        .resume-logo {
+          print-color-adjust: exact;
+          -webkit-print-color-adjust: exact;
+        }
       }
 
       @media (max-width: 700px) {
@@ -169,6 +188,10 @@
           grid-template-columns: 1fr;
           gap: 2px;
         }
+
+        .resume-header {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
@@ -178,16 +201,19 @@
     </div>
 
     <main>
-      <header>
-        <h1>Abhey Deep</h1>
-        <p class="topline">Senior Full-Stack Software Engineer | 6+ Years Experience</p>
-        <div class="contact">
-          <span>+91-7986505489</span>
-          <span>abheyarora6@gmail.com</span>
-          <span>linkedin.com/in/abhey-deep</span>
-          <span>github.com/Abheydeep</span>
-          <span>India - Open to relocation</span>
+      <header class="resume-header">
+        <div>
+          <h1>Abhey Deep</h1>
+          <p class="topline">Senior Full-Stack Software Engineer | 6+ Years Experience</p>
+          <div class="contact">
+            <span>+91-7986505489</span>
+            <span>abheyarora6@gmail.com</span>
+            <span>linkedin.com/in/abhey-deep</span>
+            <span>github.com/Abheydeep</span>
+            <span>India - Open to relocation</span>
+          </div>
         </div>
+        <img class="resume-logo" src="assets/logo.svg" alt="Abhey Deep logo">
       </header>
 
       <section>
@@ -202,8 +228,8 @@
         <p><strong>Core Languages:</strong> Java 17, C++, Python, SQL, PL/SQL, JavaScript ES6+, TypeScript.</p>
         <p><strong>Backend &amp; Architecture:</strong> Spring Boot, Spring MVC, REST APIs, microservices, event-driven architecture, concurrent programming, Kafka, OOP, SOLID.</p>
         <p><strong>Frontend:</strong> React, Next.js, Oracle JET, VBCS, HTML5, CSS3, Web Components.</p>
-        <p><strong>Databases &amp; Caching:</strong> Oracle DB, PostgreSQL monthly partitioning, Redis, SQL optimization, indexing, AWR reports, query execution plans.</p>
-        <p><strong>DevOps &amp; Practices:</strong> Docker, OCI, Git/GitHub monorepos, Maven, Node.js, Helium CI/CD, JUnit, Mockito, TDD, Agile/Scrum.</p>
+        <p><strong>Databases &amp; Caching:</strong> Oracle DB, PostgreSQL monthly partitioning, Supabase, Redis, SQL optimization, indexing, AWR reports, query execution plans.</p>
+        <p><strong>DevOps &amp; Practices:</strong> Docker, OCI, Render, Git/GitHub monorepos, Maven, Node.js, Helium CI/CD, JUnit, Mockito, TDD, Agile/Scrum.</p>
       </section>
 
       <section>
@@ -267,6 +293,16 @@
             <li>Built a Java modular monolith backend integrated with a Next.js public portal for SEO and a private React SPA administrative command center.</li>
             <li>Engineered narrative clustering that groups financial news into actionable themes and evaluates technical setups for strict 1:2 risk-reward ratios.</li>
             <li>Implemented PostgreSQL monthly partitioning, Redis caching for sub-minute quote-board updates, and permission-claim based admin access.</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <h3 class="project-title">The Win List (Habit Ledger) | Next.js 15, React 19, TypeScript, Tailwind CSS, Supabase, Render</h3>
+          <ul>
+            <li>Built a production daily-wins app for tracking must-do habits, monthly progress, daily notes, image exports, and editable win ordering across a polished responsive interface.</li>
+            <li>Designed a local-first architecture using browser storage as the instant source of truth with optional Supabase Auth, PostgreSQL, RLS, and backup/restore cloud sync.</li>
+            <li>Implemented a privacy-conscious consent boundary separating sync, analytics, recommendations, and ads personalization while excluding daily notes from segmentation.</li>
+            <li>Modeled aggregate launch metrics through an admin console gated by app_admins and RPC access, exposing adoption and storage signals without leaking user-level notes.</li>
           </ul>
         </article>
 

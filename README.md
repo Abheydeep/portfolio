@@ -1,13 +1,16 @@
+<img src="assets/logo.svg" alt="Abhey Deep systems stamp logo" width="64">
+
 # Abhey Deep Portfolio
 
 Static portfolio and resume package for Abhey Deep, Senior Full-Stack Software Engineer.
 
 ## Files
 
-- `index.html` - main portfolio page with MarketNews architecture case study.
+- `index.html` - main portfolio page with MarketNews and The Win List architecture case studies.
 - `resume.html` - print-friendly resume page with a browser print/save-to-PDF action.
+- `assets/logo.svg` - reusable AD systems stamp used across the site, favicon, and resume.
 - `assets/styles.css` - shared portfolio styling.
-- `assets/app.js` - mobile navigation and icon initialization.
+- `assets/app.js` - mobile navigation, case-file tabs, canvas sketch, and tiny console easter eggs.
 
 ## Local Preview
 
