@@ -56,7 +56,7 @@
           <img class="brand-logo" src="assets/logo.svg" alt="" aria-hidden="true">
           <span class="brand-copy">
             <strong>Abhey Deep</strong>
-            <small>systems field log</small>
+            <small>full-stack portfolio</small>
           </span>
         </a>
 
@@ -65,10 +65,9 @@
         </button>
 
         <div class="desktop-nav">
-          <a href="#work-log">Work log</a>
-          <a href="#brief">Brief</a>
-          <a href="#case-file">Case files</a>
-          <a href="#notes">Notes</a>
+          <a href="#work-log">Experience</a>
+          <a href="#case-file">Projects</a>
+          <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
         </div>
 
@@ -79,10 +78,9 @@
       </nav>
 
       <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
-        <a href="#work-log">Work log</a>
-        <a href="#brief">Brief</a>
-        <a href="#case-file">Case files</a>
-        <a href="#notes">Notes</a>
+        <a href="#work-log">Experience</a>
+        <a href="#case-file">Projects</a>
+        <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
         <a href="resume.html" target="_blank" rel="noopener">Resume</a>
       </div>
@@ -108,7 +106,7 @@
             </a>
             <a class="button button-outline" href="#case-file">
               <i data-lucide="route" aria-hidden="true"></i>
-              <span>Read the case file</span>
+              <span>See projects</span>
             </a>
           </div>
         </div>
@@ -126,20 +124,10 @@
         </div>
       </section>
 
-      <section class="console-strip section-wrap" aria-label="Site command console">
-        <label for="site-command">site console</label>
-        <div class="console-input-wrap">
-          <span aria-hidden="true">$</span>
-          <input id="site-command" type="text" autocomplete="off" spellcheck="false" placeholder="try: latency, shipit, coffee, oracle, wins" data-command-input>
-          <button type="button" class="mini-button" data-command-run>run</button>
-        </div>
-        <p data-command-output>Small surface area, useful surprises. The console is mostly harmless.</p>
-      </section>
-
       <section class="work-log section-wrap" id="work-log">
         <div class="section-heading">
-          <p class="kicker">Work log</p>
-          <h2>Enterprise engineering, recorded as changes that survived production.</h2>
+          <p class="kicker">Experience</p>
+          <h2>Production systems I have built, improved, and kept moving.</h2>
         </div>
 
         <div class="logbook">
@@ -186,8 +174,8 @@
 
       <section class="brief section-wrap" id="brief">
         <div class="brief-copy">
-          <p class="kicker">Operating brief</p>
-          <h2>I like systems with evidence: traces, query plans, state transitions, and UI copy that admits what is happening.</h2>
+          <p class="kicker">How I work</p>
+          <h2>I care about performance, clear ownership, and interfaces people can use under pressure.</h2>
         </div>
         <div class="brief-ledger">
           <div>
@@ -210,10 +198,10 @@
 
       <section class="case-file section-wrap" id="case-file">
         <div class="section-heading">
-          <p class="kicker">Flagship case files</p>
-          <h2>Shipped systems, explained by the decisions that made them work.</h2>
+          <p class="kicker">Projects</p>
+          <h2>Two shipped projects, explained simply.</h2>
           <p>
-            Less postcard, more engineering receipt. Each case file shows the problem, architecture, tradeoff, result, and live proof so the important part does not hide behind a pretty screenshot.
+            Each project shows the problem, how I built it, the main design decision, the result, and where you can open it.
           </p>
         </div>
 
@@ -221,7 +209,7 @@
           <div class="case-study-header">
             <div>
               <span class="stamp">live archive / source available</span>
-              <p class="kicker">Case file 01 / Market Narrative</p>
+              <p class="kicker">Project 01 / Market Narrative</p>
               <h3>Market Narrative Storyboard Engine</h3>
               <p>
                 A financial media engine that turns overnight market signals, news stories, and technical setups into deterministic daily briefing packages.
@@ -245,11 +233,11 @@
               <dd>Daily market content usually arrives as scattered quotes, headlines, and chart notes. The useful narrative has to be assembled quickly, repeatably, and with fewer manual judgment leaks.</dd>
             </div>
             <div>
-              <dt>Architecture</dt>
+              <dt>How I built it</dt>
               <dd>Java 17 and Spring Boot run the modular backend; Next.js publishes the public archive; React powers the admin studio; PostgreSQL monthly partitions and Redis keep time-series reads practical.</dd>
             </div>
             <div>
-              <dt>Tradeoff</dt>
+              <dt>Design choice</dt>
               <dd>Kept it as a modular monolith instead of premature microservices, and used deterministic clustering plus risk-reward rules where auditability mattered more than theatrical AI magic.</dd>
             </div>
             <div>
@@ -257,17 +245,18 @@
               <dd>A live market archive with SEO-aware digests, repeatable reel-script generation, prompt packages, and a cleaner operating path from raw signal to publishable narrative.</dd>
             </div>
             <div>
-              <dt>Live proof</dt>
+              <dt>Open it</dt>
               <dd><a href="https://marketnarrative.in/" target="_blank" rel="noopener">marketnarrative.in</a> is live, with the monorepo source available on GitHub for review.</dd>
             </div>
           </dl>
 
-          <div class="case-artifact">
+          <details class="case-artifact">
+            <summary>Optional: view system map</summary>
             <div class="dossier">
               <div class="dossier-sidebar">
-                <h4>Architecture view</h4>
+                <h4>System map</h4>
                 <p>
-                  The diagram is intentionally DOM-built: easy to scan, responsive, and less mysterious than an image pasted from a diagram tool at 1:17 AM.
+                  A quick look at how readers, market data, news, the backend, and the admin studio connect.
                 </p>
                 <div class="dossier-tabs" role="tablist" aria-label="MarketNews architecture views">
                   <button type="button" role="tab" aria-selected="true" aria-controls="panel-context" id="tab-context" data-diagram-tab="context">Context</button>
@@ -317,7 +306,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </details>
         </article>
       </section>
 
@@ -326,7 +315,7 @@
           <div class="case-study-header">
             <div>
               <span class="stamp">live product / receipts included</span>
-              <p class="kicker">Case file 02 / The Win List</p>
+              <p class="kicker">Project 02 / The Win List</p>
               <h3>A daily wins product that treats consistency like a ledger, not a motivational poster.</h3>
               <p>
                 Habit Ledger became <a href="https://www.mywinlist.com/" target="_blank" rel="noopener">The Win List</a>: a production Next.js app for tracking today&apos;s must-do wins, reviewing monthly momentum, and syncing only when the user explicitly asks for the cloud to remember.
@@ -350,11 +339,11 @@
               <dd>Most habit tools turn a simple day into a ceremony. The product needed to make the next win obvious, keep reflection lightweight, and avoid punishing missed days.</dd>
             </div>
             <div>
-              <dt>Architecture</dt>
+              <dt>How I built it</dt>
               <dd>Next.js 15, React 19, and TypeScript drive the app; browser storage keeps the first interaction instant; Supabase handles optional auth, Postgres backup, RLS, and launch metrics.</dd>
             </div>
             <div>
-              <dt>Tradeoff</dt>
+              <dt>Design choice</dt>
               <dd>Chose local-first data with explicit cloud sync instead of always-online persistence, and separated analytics choices from personal notes so growth metrics do not eat user trust.</dd>
             </div>
             <div>
@@ -362,57 +351,60 @@
               <dd>A live planning product with fast daily entry, monthly momentum review, export paths, optional backup and restore, and onboarding tests that keep personalization honest.</dd>
             </div>
             <div>
-              <dt>Live proof</dt>
+              <dt>Open it</dt>
               <dd><a href="https://www.mywinlist.com/" target="_blank" rel="noopener">mywinlist.com</a> is live, with the active onboarding branch linked for implementation review.</dd>
             </div>
           </dl>
 
-          <div class="case-artifact product-case">
-            <div class="product-copy">
-              <h4>Operating model</h4>
-              <p>
-                The product keeps its promise by making the default path local and fast, then treating the cloud as a deliberate capability instead of a silent dependency.
-              </p>
-              <div class="proof-tags" aria-label="The Win List stack">
-                <span>Next.js 15</span>
-                <span>React 19</span>
-                <span>TypeScript</span>
-                <span>Tailwind CSS</span>
-                <span>Supabase</span>
-                <span>Render</span>
+          <details class="case-artifact">
+            <summary>Optional: view operating model</summary>
+            <div class="product-case">
+              <div class="product-copy">
+                <h4>Operating model</h4>
+                <p>
+                  The product keeps its promise by making the default path local and fast, then treating the cloud as a deliberate capability instead of a silent dependency.
+                </p>
+                <div class="proof-tags" aria-label="The Win List stack">
+                  <span>Next.js 15</span>
+                  <span>React 19</span>
+                  <span>TypeScript</span>
+                  <span>Tailwind CSS</span>
+                  <span>Supabase</span>
+                  <span>Render</span>
+                </div>
               </div>
-            </div>
 
-            <div class="ledger-flow" aria-label="The Win List architecture sketch">
-              <div class="flow-node ui">
-                <strong>today&apos;s wins</strong>
-                <span>track, note, export</span>
-              </div>
-              <div class="flow-arrow" aria-hidden="true"></div>
-              <div class="flow-node local">
-                <strong>browser ledger</strong>
-                <span>fast local source</span>
-              </div>
-              <div class="flow-split" aria-hidden="true"></div>
-              <div class="flow-row">
-                <div class="flow-node cloud">
-                  <strong>Supabase sync</strong>
-                  <span>Auth, Postgres, RLS</span>
+              <div class="ledger-flow" aria-label="The Win List architecture sketch">
+                <div class="flow-node ui">
+                  <strong>today&apos;s wins</strong>
+                  <span>track, note, export</span>
                 </div>
-                <div class="flow-node admin">
-                  <strong>admin metrics</strong>
-                  <span>aggregate launch view</span>
+                <div class="flow-arrow" aria-hidden="true"></div>
+                <div class="flow-node local">
+                  <strong>browser ledger</strong>
+                  <span>fast local source</span>
+                </div>
+                <div class="flow-split" aria-hidden="true"></div>
+                <div class="flow-row">
+                  <div class="flow-node cloud">
+                    <strong>Supabase sync</strong>
+                    <span>Auth, Postgres, RLS</span>
+                  </div>
+                  <div class="flow-node admin">
+                    <strong>admin metrics</strong>
+                    <span>aggregate launch view</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </details>
         </article>
       </section>
 
       <section class="field-notes section-wrap" id="notes">
         <div class="section-heading narrow">
-          <p class="kicker">Field notes</p>
-          <h2>Small beliefs collected from large systems.</h2>
+          <p class="kicker">Notes</p>
+          <h2>A few engineering beliefs, kept short.</h2>
         </div>
         <div class="notes-wall">
           <article>
@@ -436,8 +428,8 @@
 
       <section class="tool-index section-wrap" id="skills">
         <div>
-          <p class="kicker">Tool index</p>
-          <h2>Tools I reach for when the system needs to stop guessing.</h2>
+          <p class="kicker">Skills</p>
+          <h2>Tools and systems I use often.</h2>
         </div>
         <dl>
           <div>
@@ -457,6 +449,16 @@
             <dd>Docker, OCI, GitHub monorepos, Maven, Node.js, Helium CI/CD, JUnit, Mockito, TDD, Agile/Scrum.</dd>
           </div>
         </dl>
+      </section>
+
+      <section class="console-strip section-wrap" aria-label="Optional site console">
+        <label for="site-command">optional console</label>
+        <div class="console-input-wrap">
+          <span aria-hidden="true">$</span>
+          <input id="site-command" type="text" autocomplete="off" spellcheck="false" placeholder="try: latency, shipit, coffee, oracle, wins" data-command-input>
+          <button type="button" class="mini-button" data-command-run>run</button>
+        </div>
+        <p data-command-output>A small hidden corner for easter eggs. Safe to ignore.</p>
       </section>
 
       <section class="contact-panel section-wrap" id="contact">

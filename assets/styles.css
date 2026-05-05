@@ -489,7 +489,7 @@ h4 {
 }
 
 .console-strip {
-  margin-top: -2rem;
+  margin-top: 4rem;
   padding: 1rem;
   display: grid;
   grid-template-columns: 120px minmax(0, 1fr);
@@ -696,7 +696,7 @@ h4 {
 }
 
 .case-facts div {
-  min-height: 210px;
+  min-height: 178px;
   padding: 0.95rem;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -707,7 +707,6 @@ h4 {
   margin-bottom: 0.6rem;
   color: var(--amber);
   font: 900 0.76rem/1.3 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-  text-transform: lowercase;
 }
 
 .case-facts dd {
@@ -718,6 +717,40 @@ h4 {
 
 .case-artifact {
   margin-top: 0.9rem;
+}
+
+.case-artifact > summary {
+  min-height: 46px;
+  padding: 0.68rem 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.045);
+  color: var(--ink);
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.case-artifact > summary::-webkit-details-marker {
+  display: none;
+}
+
+.case-artifact > summary::after {
+  content: "+";
+  margin-left: auto;
+  color: var(--amber);
+  font: 900 1.05rem/1 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+.case-artifact[open] > summary {
+  margin-bottom: 0.75rem;
+  border-color: rgba(243, 201, 105, 0.34);
+}
+
+.case-artifact[open] > summary::after {
+  content: "-";
 }
 
 .dossier {
