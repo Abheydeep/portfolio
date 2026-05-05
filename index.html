@@ -102,7 +102,7 @@
           <div class="hero-actions">
             <a class="button button-solid" href="mailto:abheyarora6@gmail.com">
               <i data-lucide="send" aria-hidden="true"></i>
-              <span>Start a thread</span>
+              <span>Email me</span>
             </a>
             <a class="button button-outline" href="#case-file">
               <i data-lucide="route" aria-hidden="true"></i>
@@ -172,60 +172,72 @@
         </div>
       </section>
 
-      <section class="brief section-wrap" id="brief">
-        <div class="brief-copy">
-          <p class="kicker">How I work</p>
-          <h2>I care about performance, clear ownership, and interfaces people can use under pressure.</h2>
-        </div>
-        <div class="brief-ledger">
-          <div>
-            <span>01</span>
-            <strong>Backend first does not mean user last.</strong>
-            <p>Latency, retries, pagination, and idempotency are product decisions wearing infrastructure clothes.</p>
+      <section class="section-wrap fold-section" id="brief">
+        <details class="fold-details">
+          <summary class="fold-summary">
+            <span>
+              <span class="kicker">How I work</span>
+              <strong>Performance, ownership, and usable interfaces.</strong>
+              <small>Short operating principles behind the work.</small>
+            </span>
+          </summary>
+          <div class="fold-content brief">
+            <div class="brief-copy">
+              <p class="kicker">How I work</p>
+              <h2>I care about performance, clear ownership, and interfaces people can use under pressure.</h2>
+            </div>
+            <div class="brief-ledger">
+              <div>
+                <span>01</span>
+                <strong>Backend first does not mean user last.</strong>
+                <p>Latency, retries, pagination, and idempotency are product decisions wearing infrastructure clothes.</p>
+              </div>
+              <div>
+                <span>02</span>
+                <strong>Modernization is archaeology with a deploy button.</strong>
+                <p>Respect the old system enough to understand it. Then make the next person need less courage.</p>
+              </div>
+              <div>
+                <span>03</span>
+                <strong>Dashboards should not be apology letters.</strong>
+                <p>If a screen needs a meeting to explain, the system is leaking complexity into the room.</p>
+              </div>
+            </div>
           </div>
-          <div>
-            <span>02</span>
-            <strong>Modernization is archaeology with a deploy button.</strong>
-            <p>Respect the old system enough to understand it. Then make the next person need less courage.</p>
-          </div>
-          <div>
-            <span>03</span>
-            <strong>Dashboards should not be apology letters.</strong>
-            <p>If a screen needs a meeting to explain, the system is leaking complexity into the room.</p>
-          </div>
-        </div>
+        </details>
       </section>
 
-      <section class="case-file section-wrap" id="case-file">
-        <div class="section-heading">
-          <p class="kicker">Projects</p>
-          <h2>Two shipped projects, explained simply.</h2>
-          <p>
-            Each project shows the problem, how I built it, the main design decision, the result, and where you can open it.
-          </p>
-        </div>
-
-        <article class="case-study case-study-market">
-          <div class="case-study-header">
-            <div>
-              <span class="stamp">live archive / source available</span>
-              <p class="kicker">Project 01 / Market Narrative</p>
-              <h3>Market Narrative Storyboard Engine</h3>
-              <p>
-                A financial media engine that turns overnight market signals, news stories, and technical setups into deterministic daily briefing packages.
-              </p>
-            </div>
-            <div class="project-links case-links" aria-label="Market Narrative project links">
-              <a class="button button-solid" href="https://marketnarrative.in/" target="_blank" rel="noopener">
-                <i data-lucide="external-link" aria-hidden="true"></i>
-                <span>Open live archive</span>
-              </a>
-              <a class="button button-outline" href="https://github.com/Abheydeep/marketNews" target="_blank" rel="noopener">
-                <i data-lucide="git-branch" aria-hidden="true"></i>
-                <span>Read source</span>
-              </a>
-            </div>
-          </div>
+      <section class="section-wrap fold-section" id="case-file">
+        <details class="fold-details">
+          <summary class="fold-summary">
+            <span>
+              <span class="kicker">Projects</span>
+              <strong>Two shipped projects, explained simply.</strong>
+              <small>Market Narrative and The Win List, with live links.</small>
+            </span>
+          </summary>
+          <div class="fold-content project-stack">
+            <article class="case-study case-study-market">
+              <div class="case-study-header">
+                <div>
+                  <span class="stamp">live archive / source available</span>
+                  <p class="kicker">Project 01 / Market Narrative</p>
+                  <h3>Market Narrative Storyboard Engine</h3>
+                  <p>
+                    A financial media engine that turns overnight market signals, news stories, and technical setups into deterministic daily briefing packages.
+                  </p>
+                </div>
+                <div class="project-links case-links" aria-label="Market Narrative project links">
+                  <a class="button button-solid" href="https://marketnarrative.in/" target="_blank" rel="noopener">
+                    <i data-lucide="external-link" aria-hidden="true"></i>
+                    <span>Open live archive</span>
+                  </a>
+                  <a class="button button-outline" href="https://github.com/Abheydeep/marketNews" target="_blank" rel="noopener">
+                    <i data-lucide="git-branch" aria-hidden="true"></i>
+                    <span>Read source</span>
+                  </a>
+                </div>
+              </div>
 
           <dl class="case-facts" aria-label="Market Narrative case study">
             <div>
@@ -307,54 +319,52 @@
               </div>
             </div>
           </details>
-        </article>
-      </section>
+            </article>
 
-      <section class="product-file section-wrap" id="win-list">
-        <article class="case-study case-study-win">
-          <div class="case-study-header">
-            <div>
-              <span class="stamp">live product / receipts included</span>
-              <p class="kicker">Project 02 / The Win List</p>
-              <h3>A daily wins product that treats consistency like a ledger, not a motivational poster.</h3>
-              <p>
-                Habit Ledger became <a href="https://www.mywinlist.com/" target="_blank" rel="noopener">The Win List</a>: a production Next.js app for tracking today&apos;s must-do wins, reviewing monthly momentum, and syncing only when the user explicitly asks for the cloud to remember.
-              </p>
-            </div>
-            <div class="project-links" aria-label="The Win List project links">
-              <a class="button button-solid" href="https://www.mywinlist.com/" target="_blank" rel="noopener">
-                <i data-lucide="external-link" aria-hidden="true"></i>
-                <span>Open product</span>
-              </a>
-              <a class="button button-outline" href="https://github.com/Abheydeep/Habit-Ledger/tree/codex/personalized-onboarding" target="_blank" rel="noopener">
-                <i data-lucide="git-branch" aria-hidden="true"></i>
-                <span>Read branch</span>
-              </a>
-            </div>
-          </div>
+            <article class="case-study case-study-win">
+              <div class="case-study-header">
+                <div>
+                  <span class="stamp">live product / receipts included</span>
+                  <p class="kicker">Project 02 / The Win List</p>
+                  <h3>A daily wins product that treats consistency like a ledger, not a motivational poster.</h3>
+                  <p>
+                    Habit Ledger became <a href="https://www.mywinlist.com/" target="_blank" rel="noopener">The Win List</a>: a production Next.js app for tracking today&apos;s must-do wins, reviewing monthly momentum, and syncing only when the user explicitly asks for the cloud to remember.
+                  </p>
+                </div>
+                <div class="project-links" aria-label="The Win List project links">
+                  <a class="button button-solid" href="https://www.mywinlist.com/" target="_blank" rel="noopener">
+                    <i data-lucide="external-link" aria-hidden="true"></i>
+                    <span>Open product</span>
+                  </a>
+                  <a class="button button-outline" href="https://github.com/Abheydeep/Habit-Ledger/tree/codex/personalized-onboarding" target="_blank" rel="noopener">
+                    <i data-lucide="git-branch" aria-hidden="true"></i>
+                    <span>Read branch</span>
+                  </a>
+                </div>
+              </div>
 
-          <dl class="case-facts" aria-label="The Win List case study">
-            <div>
-              <dt>Problem</dt>
-              <dd>Most habit tools turn a simple day into a ceremony. The product needed to make the next win obvious, keep reflection lightweight, and avoid punishing missed days.</dd>
-            </div>
-            <div>
-              <dt>How I built it</dt>
-              <dd>Next.js 15, React 19, and TypeScript drive the app; browser storage keeps the first interaction instant; Supabase handles optional auth, Postgres backup, RLS, and launch metrics.</dd>
-            </div>
-            <div>
-              <dt>Design choice</dt>
-              <dd>Chose local-first data with explicit cloud sync instead of always-online persistence, and separated analytics choices from personal notes so growth metrics do not eat user trust.</dd>
-            </div>
-            <div>
-              <dt>Result</dt>
-              <dd>A live planning product with fast daily entry, monthly momentum review, export paths, optional backup and restore, and onboarding tests that keep personalization honest.</dd>
-            </div>
-            <div>
-              <dt>Open it</dt>
-              <dd><a href="https://www.mywinlist.com/" target="_blank" rel="noopener">mywinlist.com</a> is live, with the active onboarding branch linked for implementation review.</dd>
-            </div>
-          </dl>
+              <dl class="case-facts" aria-label="The Win List case study">
+                <div>
+                  <dt>Problem</dt>
+                  <dd>Most habit tools turn a simple day into a ceremony. The product needed to make the next win obvious, keep reflection lightweight, and avoid punishing missed days.</dd>
+                </div>
+                <div>
+                  <dt>How I built it</dt>
+                  <dd>Next.js 15, React 19, and TypeScript drive the app; browser storage keeps the first interaction instant; Supabase handles optional auth, Postgres backup, RLS, and launch metrics.</dd>
+                </div>
+                <div>
+                  <dt>Design choice</dt>
+                  <dd>Chose local-first data with explicit cloud sync instead of always-online persistence, and separated analytics choices from personal notes so growth metrics do not eat user trust.</dd>
+                </div>
+                <div>
+                  <dt>Result</dt>
+                  <dd>A live planning product with fast daily entry, monthly momentum review, export paths, optional backup and restore, and onboarding tests that keep personalization honest.</dd>
+                </div>
+                <div>
+                  <dt>Open it</dt>
+                  <dd><a href="https://www.mywinlist.com/" target="_blank" rel="noopener">mywinlist.com</a> is live, with the active onboarding branch linked for implementation review.</dd>
+                </div>
+              </dl>
 
           <details class="case-artifact">
             <summary>Optional: view operating model</summary>
@@ -398,91 +408,133 @@
               </div>
             </div>
           </details>
-        </article>
+            </article>
+          </div>
+        </details>
       </section>
 
-      <section class="field-notes section-wrap" id="notes">
-        <div class="section-heading narrow">
-          <p class="kicker">Notes</p>
-          <h2>A few engineering beliefs, kept short.</h2>
-        </div>
-        <div class="notes-wall">
-          <article>
-            <span>query plan margin note</span>
-            <p>When a report is slow, the database is not being dramatic. It is telling you where the story bends.</p>
-          </article>
-          <article>
-            <span>admin UI margin note</span>
-            <p>The best internal tools feel like someone stayed late and removed three future Slack threads.</p>
-          </article>
-          <article>
-            <span>architecture margin note</span>
-            <p>Boxes are cheap. Boundaries are expensive. Draw fewer and mean them.</p>
-          </article>
-          <article>
-            <span>deployment margin note</span>
-            <p>A release that is boring at 6 PM is a design achievement.</p>
-          </article>
-        </div>
+      <section class="section-wrap fold-section" id="notes">
+        <details class="fold-details">
+          <summary class="fold-summary">
+            <span>
+              <span class="kicker">Notes</span>
+              <strong>A few engineering beliefs, kept short.</strong>
+              <small>Optional personality, not required reading.</small>
+            </span>
+          </summary>
+          <div class="fold-content">
+            <div class="notes-wall">
+              <article>
+                <span>query plan margin note</span>
+                <p>When a report is slow, the database is not being dramatic. It is telling you where the story bends.</p>
+              </article>
+              <article>
+                <span>admin UI margin note</span>
+                <p>The best internal tools feel like someone stayed late and removed three future Slack threads.</p>
+              </article>
+              <article>
+                <span>architecture margin note</span>
+                <p>Boxes are cheap. Boundaries are expensive. Draw fewer and mean them.</p>
+              </article>
+              <article>
+                <span>deployment margin note</span>
+                <p>A release that is boring at 6 PM is a design achievement.</p>
+              </article>
+            </div>
+          </div>
+        </details>
       </section>
 
-      <section class="tool-index section-wrap" id="skills">
-        <div>
-          <p class="kicker">Skills</p>
-          <h2>Tools and systems I use often.</h2>
-        </div>
-        <dl>
-          <div>
-            <dt>Backend</dt>
-            <dd>Java 17, Spring Boot, Spring MVC, REST APIs, microservices, event-driven architecture, Kafka, concurrency, SOLID.</dd>
+      <section class="section-wrap fold-section" id="skills">
+        <details class="fold-details">
+          <summary class="fold-summary">
+            <span>
+              <span class="kicker">Skills</span>
+              <strong>Tools and systems I use often.</strong>
+              <small>Backend, frontend, data, and delivery stack.</small>
+            </span>
+          </summary>
+          <div class="fold-content tool-index">
+            <div>
+              <p class="kicker">Skills</p>
+              <h2>Tools and systems I use often.</h2>
+            </div>
+            <dl>
+              <div>
+                <dt>Backend</dt>
+                <dd>Java 17, Spring Boot, Spring MVC, REST APIs, microservices, event-driven architecture, Kafka, concurrency, SOLID.</dd>
+              </div>
+              <div>
+                <dt>Frontend</dt>
+                <dd>React, Next.js, Oracle JET, VBCS, TypeScript, JavaScript ES6+, HTML5, CSS3, responsive UI systems.</dd>
+              </div>
+              <div>
+                <dt>Data</dt>
+                <dd>Oracle DB, PostgreSQL partitioning, Redis, PL/SQL, SQL optimization, indexing, AWR reports, execution plans.</dd>
+              </div>
+              <div>
+                <dt>Delivery</dt>
+                <dd>Docker, OCI, GitHub monorepos, Maven, Node.js, Helium CI/CD, JUnit, Mockito, TDD, Agile/Scrum.</dd>
+              </div>
+            </dl>
           </div>
-          <div>
-            <dt>Frontend</dt>
-            <dd>React, Next.js, Oracle JET, VBCS, TypeScript, JavaScript ES6+, HTML5, CSS3, responsive UI systems.</dd>
-          </div>
-          <div>
-            <dt>Data</dt>
-            <dd>Oracle DB, PostgreSQL partitioning, Redis, PL/SQL, SQL optimization, indexing, AWR reports, execution plans.</dd>
-          </div>
-          <div>
-            <dt>Delivery</dt>
-            <dd>Docker, OCI, GitHub monorepos, Maven, Node.js, Helium CI/CD, JUnit, Mockito, TDD, Agile/Scrum.</dd>
-          </div>
-        </dl>
+        </details>
       </section>
 
-      <section class="console-strip section-wrap" aria-label="Optional site console">
-        <label for="site-command">optional console</label>
-        <div class="console-input-wrap">
-          <span aria-hidden="true">$</span>
-          <input id="site-command" type="text" autocomplete="off" spellcheck="false" placeholder="try: latency, shipit, coffee, oracle, wins" data-command-input>
-          <button type="button" class="mini-button" data-command-run>run</button>
-        </div>
-        <p data-command-output>A small hidden corner for easter eggs. Safe to ignore.</p>
+      <section class="section-wrap fold-section" aria-label="Optional site console">
+        <details class="fold-details">
+          <summary class="fold-summary">
+            <span>
+              <span class="kicker">Optional console</span>
+              <strong>A small corner for easter eggs.</strong>
+              <small>Safe to ignore during normal browsing.</small>
+            </span>
+          </summary>
+          <div class="fold-content console-strip">
+            <label for="site-command">optional console</label>
+            <div class="console-input-wrap">
+              <span aria-hidden="true">$</span>
+              <input id="site-command" type="text" autocomplete="off" spellcheck="false" placeholder="try: latency, shipit, coffee, oracle, wins" data-command-input>
+              <button type="button" class="mini-button" data-command-run>run</button>
+            </div>
+            <p data-command-output>A small hidden corner for easter eggs. Safe to ignore.</p>
+          </div>
+        </details>
       </section>
 
-      <section class="contact-panel section-wrap" id="contact">
-        <div>
-          <p class="kicker">Available for the right hard problem</p>
-          <h2>Senior full-stack, backend-heavy product engineering, enterprise modernization, and systems with a pulse.</h2>
-          <p>
-            Based in India and open to relocation. Especially interested in teams that care about performance, product craft, and codebases people can still understand on a Thursday evening.
-          </p>
-        </div>
-        <div class="contact-actions">
-          <a class="button button-solid" href="mailto:abheyarora6@gmail.com">
-            <i data-lucide="mail" aria-hidden="true"></i>
-            <span>Email</span>
-          </a>
-          <a class="button button-outline" href="https://linkedin.com/in/abhey-deep" target="_blank" rel="noopener">
-            <i data-lucide="briefcase-business" aria-hidden="true"></i>
-            <span>LinkedIn</span>
-          </a>
-          <a class="button button-quiet" href="https://github.com/Abheydeep" target="_blank" rel="noopener">
-            <i data-lucide="git-branch" aria-hidden="true"></i>
-            <span>GitHub</span>
-          </a>
-        </div>
+      <section class="section-wrap fold-section" id="contact">
+        <details class="fold-details">
+          <summary class="fold-summary">
+            <span>
+              <span class="kicker">Contact</span>
+              <strong>Open to senior full-stack and backend-heavy product roles.</strong>
+              <small>Email, LinkedIn, and GitHub.</small>
+            </span>
+          </summary>
+          <div class="fold-content contact-panel">
+            <div>
+              <p class="kicker">Available for the right hard problem</p>
+              <h2>Senior full-stack, backend-heavy product engineering, enterprise modernization, and systems with a pulse.</h2>
+              <p>
+                Based in India and open to relocation. Especially interested in teams that care about performance, product craft, and codebases people can still understand on a Thursday evening.
+              </p>
+            </div>
+            <div class="contact-actions">
+              <a class="button button-solid" href="mailto:abheyarora6@gmail.com">
+                <i data-lucide="mail" aria-hidden="true"></i>
+                <span>Email</span>
+              </a>
+              <a class="button button-outline" href="https://linkedin.com/in/abhey-deep" target="_blank" rel="noopener">
+                <i data-lucide="briefcase-business" aria-hidden="true"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a class="button button-quiet" href="https://github.com/Abheydeep" target="_blank" rel="noopener">
+                <i data-lucide="git-branch" aria-hidden="true"></i>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
+        </details>
       </section>
     </main>
 

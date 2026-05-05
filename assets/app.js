@@ -10,6 +10,7 @@ const redrawMap = document.querySelector("[data-redraw-map]");
 const canvas = document.querySelector("#signal-map");
 const diagramTabs = document.querySelectorAll("[data-diagram-tab]");
 const diagramPanels = document.querySelectorAll("[data-diagram-panel]");
+const inPageLinks = document.querySelectorAll('a[href^="#"]');
 
 let toastTimer;
 let keyBuffer = "";
@@ -71,6 +72,24 @@ const runCommand = (rawValue) => {
   }
 
   setOutput(messages[value] || `Unknown command: ${value}. Try help if the machine is being theatrical.`);
+};
+
+const openFoldForTarget = (target) => {
+  if (!target) return;
+
+  const section = target.classList?.contains("fold-section") ? target : target.closest?.(".fold-section");
+  const details = section?.querySelector(".fold-details");
+
+  if (details) {
+    details.open = true;
+  }
+};
+
+const openFoldFromHash = () => {
+  if (!window.location.hash) return;
+
+  const target = document.querySelector(window.location.hash);
+  openFoldForTarget(target);
 };
 
 const randomFromSeed = () => {
@@ -214,6 +233,15 @@ if (commandRun && commandInput) {
   });
 }
 
+inPageLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    const targetId = link.getAttribute("href");
+    if (!targetId || targetId === "#") return;
+
+    openFoldForTarget(document.querySelector(targetId));
+  });
+});
+
 if (redrawMap) {
   redrawMap.addEventListener("click", () => {
     mapSeed += 17;
@@ -252,4 +280,6 @@ document.addEventListener("keydown", (event) => {
 });
 
 drawSignalMap();
+openFoldFromHash();
+window.addEventListener("hashchange", openFoldFromHash);
 console.info("Portfolio console commands: help, latency, shipit, coffee, oracle, wins, logo, reset.");
