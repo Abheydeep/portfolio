@@ -120,6 +120,16 @@ i[data-lucide] {
   margin: 0 auto;
 }
 
+#top,
+#work-log,
+#brief,
+#case-file,
+#notes,
+#skills,
+#contact {
+  scroll-margin-top: 88px;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -403,6 +413,14 @@ h4 {
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-top: 2rem;
+}
+
+.workbench-details {
+  display: block;
+}
+
+.workbench-summary {
+  display: none;
 }
 
 .workbench {
@@ -1185,24 +1203,48 @@ h4 {
 }
 
 .log-entry {
-  display: grid;
-  grid-template-columns: 220px minmax(0, 1fr);
-  gap: 2rem;
-  padding: 1.75rem 0;
+  padding: 1.55rem 0;
   border-bottom: 1px solid var(--line);
 }
 
-.log-entry time {
+.log-summary {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: start;
+  cursor: pointer;
+  list-style: none;
+}
+
+.log-summary::-webkit-details-marker {
+  display: none;
+}
+
+.log-summary::after {
+  content: "-";
+  color: var(--amber);
+  font: 900 1.15rem/1 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+.log-entry:not([open]) .log-summary::after {
+  content: "+";
+}
+
+.log-summary time {
   color: var(--teal);
   font-weight: 900;
 }
 
-.log-entry ul {
+.log-detail {
+  margin: 0.65rem 0 0 calc(220px + 2rem);
+}
+
+.log-detail ul {
   margin: 0;
   padding-left: 1.15rem;
 }
 
-.log-entry li + li {
+.log-detail li + li {
   margin-top: 0.45rem;
 }
 
@@ -1435,6 +1477,92 @@ h4 {
     white-space: nowrap;
   }
 
+  .hero-lab {
+    gap: 1.25rem;
+    padding-top: 2.3rem;
+    padding-bottom: 2rem;
+  }
+
+  .kicker {
+    margin-bottom: 0.55rem;
+    font-size: 0.78rem;
+  }
+
+  .signal-row {
+    gap: 0.45rem;
+    margin-top: 1.15rem;
+  }
+
+  .signal-row span {
+    min-height: 31px;
+    padding: 0.22rem 0.56rem;
+    font-size: 0.78rem;
+  }
+
+  .hero-actions,
+  .contact-actions {
+    gap: 0.55rem;
+    margin-top: 1.25rem;
+  }
+
+  .workbench-details {
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius);
+    background: rgba(8, 11, 15, 0.66);
+    box-shadow: 0 18px 52px rgba(0, 0, 0, 0.32);
+    overflow: hidden;
+  }
+
+  .workbench-summary {
+    min-height: 58px;
+    padding: 0.75rem 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .workbench-summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .workbench-summary::after {
+    content: "+";
+    margin-left: auto;
+    color: var(--amber);
+    font: 900 1.18rem/1 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  }
+
+  .workbench-details[open] .workbench-summary {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .workbench-details[open] .workbench-summary::after {
+    content: "-";
+  }
+
+  .workbench-summary span,
+  .workbench-summary small {
+    display: block;
+  }
+
+  .workbench-summary span {
+    color: var(--ink);
+    font-weight: 900;
+  }
+
+  .workbench-summary small {
+    color: var(--faint);
+    font-size: 0.82rem;
+  }
+
+  .workbench-details .workbench {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
   .product-case::before {
     display: none;
   }
@@ -1482,16 +1610,27 @@ h4 {
     padding: 0.85rem;
   }
 
+  .fold-summary strong {
+    font-size: 1.15rem;
+  }
+
+  .fold-summary small {
+    font-size: 0.88rem;
+    line-height: 1.35;
+  }
+
   .fold-content {
     padding: 0.75rem;
   }
 
   h1 {
-    font-size: 2.55rem;
+    margin-bottom: 0.9rem;
+    font-size: 2.32rem;
+    line-height: 1;
   }
 
   h2 {
-    font-size: 1.8rem;
+    font-size: 1.72rem;
   }
 
   .hero-summary,
@@ -1515,6 +1654,49 @@ h4 {
 
   .console-input-wrap .mini-button {
     grid-column: 1 / -1;
+  }
+
+  .work-log {
+    padding-top: 2.1rem;
+  }
+
+  .work-log .section-heading {
+    margin-bottom: 0.9rem;
+  }
+
+  .log-entry {
+    padding: 1.05rem 0;
+  }
+
+  .log-summary {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.55rem 0.85rem;
+  }
+
+  .log-summary time {
+    grid-column: 1 / -1;
+    font-size: 0.9rem;
+  }
+
+  .log-summary .hash {
+    margin-bottom: 0.45rem;
+  }
+
+  .log-summary h3 {
+    margin-bottom: 0;
+    font-size: 1rem;
+  }
+
+  .log-detail {
+    margin: 0.75rem 0 0;
+  }
+
+  .log-detail ul {
+    padding-left: 1rem;
+  }
+
+  .fold-section {
+    padding-top: 0.75rem;
   }
 
   .brief-ledger div,

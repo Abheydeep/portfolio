@@ -11,6 +11,9 @@ const canvas = document.querySelector("#signal-map");
 const diagramTabs = document.querySelectorAll("[data-diagram-tab]");
 const diagramPanels = document.querySelectorAll("[data-diagram-panel]");
 const inPageLinks = document.querySelectorAll('a[href^="#"]');
+const mobileSketch = document.querySelector("[data-mobile-sketch]");
+const logEntries = document.querySelectorAll("[data-log-entry]");
+const mobileQuery = window.matchMedia("(max-width: 720px)");
 
 let toastTimer;
 let keyBuffer = "";
@@ -90,6 +93,18 @@ const openFoldFromHash = () => {
 
   const target = document.querySelector(window.location.hash);
   openFoldForTarget(target);
+};
+
+const syncMobileDefaults = () => {
+  const isMobile = mobileQuery.matches;
+
+  if (mobileSketch) {
+    mobileSketch.open = !isMobile;
+  }
+
+  logEntries.forEach((entry, index) => {
+    entry.open = !isMobile || index === 0;
+  });
 };
 
 const randomFromSeed = () => {
@@ -278,6 +293,13 @@ document.addEventListener("keydown", (event) => {
     }
   });
 });
+
+syncMobileDefaults();
+if (mobileQuery.addEventListener) {
+  mobileQuery.addEventListener("change", syncMobileDefaults);
+} else {
+  mobileQuery.addListener(syncMobileDefaults);
+}
 
 drawSignalMap();
 openFoldFromHash();
