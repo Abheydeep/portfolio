@@ -6,7 +6,7 @@
     <meta name="description" content="One-page resume for Abhey Deep, Senior Full-Stack Software Engineer.">
     <meta name="theme-color" content="#f6f4ee">
     <meta property="og:title" content="Abhey Deep | One-Page Resume">
-    <meta property="og:description" content="Senior Full-Stack Software Engineer focused on Java, Spring Boot, React, Next.js, Oracle, PostgreSQL, Redis, and enterprise systems.">
+    <meta property="og:description" content="Senior Full-Stack Software Engineer focused on Java, Spring Boot, React, Oracle, PostgreSQL, Redis, and enterprise systems.">
     <meta property="og:type" content="website">
     <title>Abhey Deep | One-Page Resume</title>
     <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
@@ -299,6 +299,21 @@
         font-weight: 800;
       }
 
+      .recognition-line {
+        margin: 0;
+        padding: 8px 9px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #f7faf9;
+        color: #243044;
+        font-size: 11.4px;
+        line-height: 1.25;
+      }
+
+      .recognition-line strong {
+        color: var(--accent-strong);
+      }
+
       .education {
         display: grid;
         grid-template-columns: minmax(0, 1fr) auto;
@@ -428,9 +443,14 @@
         }
 
         .project p,
-        .education p {
+        .education p,
+        .recognition-line {
           font-size: 10.5px;
           line-height: 1.27;
+        }
+
+        .recognition-line {
+          padding: 7px 8px;
         }
 
         .project .stack,
@@ -540,7 +560,7 @@
           <h2>Core Stack</h2>
           <ul class="skill-list">
             <li><strong>Backend:</strong> Java 17, Spring Boot, Spring MVC, REST APIs, microservices, Kafka, concurrency.</li>
-            <li><strong>Frontend:</strong> React, Next.js, TypeScript, Oracle JET, VBCS, HTML5, CSS3.</li>
+            <li><strong>Frontend:</strong> React, JavaScript, Oracle JET, VBCS, HTML5, CSS3.</li>
             <li><strong>Data:</strong> Oracle DB, PL/SQL, PostgreSQL partitioning, Redis, Supabase, SQL tuning.</li>
             <li><strong>Delivery:</strong> Docker, OCI, GitHub, Maven, Node.js, Helium CI/CD, JUnit, Mockito.</li>
           </ul>
@@ -571,7 +591,7 @@
           <h1>Abhey Deep</h1>
           <p class="title">Senior Full-Stack Software Engineer</p>
           <p class="summary">
-            Senior engineer building backend-heavy product systems across Java, Spring Boot, Oracle, React, and Next.js. Strong record improving payroll engines, modernizing enterprise UI flows, tuning database execution paths, and launching independent products with clean architecture.
+            Senior engineer building backend-heavy product systems across Java, Spring Boot, Oracle, and React. Strong record improving payroll engines, modernizing enterprise UI flows, tuning database execution paths, and launching independent products with clean architecture.
           </p>
 
           <div class="metric-strip" aria-label="Selected impact">
@@ -647,7 +667,7 @@
               <h3>Market Narrative Storyboard Engine</h3>
               <p class="date">marketnarrative.in</p>
             </div>
-            <p class="stack">Java 17, Spring Boot, Next.js, React, PostgreSQL, Redis, Docker</p>
+            <p class="stack">Java 17, Spring Boot, React, PostgreSQL, Redis, Docker</p>
             <p>Launched a financial media system that aggregates market data, clusters news into source-led themes, evaluates technical setups, and publishes SEO-aware pre-market intelligence through a public archive and React admin studio.</p>
           </article>
 
@@ -656,9 +676,22 @@
               <h3>The Win List</h3>
               <p class="date">mywinlist.com</p>
             </div>
-            <p class="stack">Next.js 15, React 19, TypeScript, Tailwind CSS, Supabase, Render</p>
-            <p>Built a production daily-wins app with local-first tracking, optional Supabase sync, monthly review, editable ordering, image exports, and a privacy-conscious consent boundary for analytics.</p>
+            <p class="stack">React, JavaScript, CSS, Supabase, Render</p>
+            <p>Built a daily-wins app with local-first tracking, optional Supabase sync, monthly review, editable ordering, image exports, and a privacy-conscious consent boundary for analytics.</p>
           </article>
+
+          <article class="project">
+            <div class="row">
+              <h3>System Diagnostics & Performance Analyzer</h3>
+              <p class="date">Java, Docker, OCI, SQL</p>
+            </div>
+            <p>Built a Java diagnostic utility that summarizes application logs, SQL latencies, thread utilization, and memory patterns into AWR-style performance views without DBA-level access.</p>
+          </article>
+        </section>
+
+        <section class="section focus">
+          <h2>Selected Recognition</h2>
+          <p class="recognition-line"><strong>Recognition:</strong> Innovation Excellence Award, Samsung Mobile Development Conference second prize, and High Potential Employee recognition at Oracle India Pvt. Ltd.</p>
         </section>
       </article>
     </main>
