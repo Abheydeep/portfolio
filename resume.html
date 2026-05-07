@@ -3,323 +3,664 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Resume for Abhey Deep, Senior Full-Stack Software Engineer.">
-    <title>Abhey Deep | Resume</title>
+    <meta name="description" content="One-page resume for Abhey Deep, Senior Full-Stack Software Engineer.">
+    <meta name="theme-color" content="#f6f4ee">
+    <meta property="og:title" content="Abhey Deep | One-Page Resume">
+    <meta property="og:description" content="Senior Full-Stack Software Engineer focused on Java, Spring Boot, React, Next.js, Oracle, PostgreSQL, Redis, and enterprise systems.">
+    <meta property="og:type" content="website">
+    <title>Abhey Deep | One-Page Resume</title>
     <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
     <style>
       :root {
+        --paper: #fffdf8;
+        --canvas: #e8edf3;
         --ink: #111827;
         --muted: #4b5563;
-        --line: #d7dde5;
-        --accent: #0369a1;
-        font-family: Arial, Helvetica, sans-serif;
+        --soft: #6b7280;
+        --line: #d8dee7;
+        --line-strong: #aeb8c8;
+        --accent: #0f766e;
+        --accent-strong: #134e4a;
+        --warm: #b45309;
+        --tag: #eef6f4;
+        --sidebar: #152238;
+        --sidebar-muted: #d7dee9;
+        --shadow: 0 26px 70px rgba(15, 23, 42, 0.16);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       }
 
       * {
         box-sizing: border-box;
       }
 
+      html {
+        background: var(--canvas);
+      }
+
       body {
         margin: 0;
         color: var(--ink);
-        background: #eef2f6;
-        line-height: 1.42;
+        background:
+          linear-gradient(120deg, rgba(15, 118, 110, 0.12), transparent 34%),
+          linear-gradient(300deg, rgba(180, 83, 9, 0.1), transparent 32%),
+          var(--canvas);
+        line-height: 1.34;
         letter-spacing: 0;
-      }
-
-      main {
-        width: min(100% - 24px, 920px);
-        margin: 24px auto;
-        padding: 38px 46px;
-        background: #fff;
-        box-shadow: 0 18px 55px rgba(15, 23, 42, 0.12);
-      }
-
-      h1,
-      h2,
-      h3,
-      p {
-        margin-top: 0;
-      }
-
-      h1 {
-        margin-bottom: 4px;
-        font-size: 32px;
-        line-height: 1.1;
-        letter-spacing: 0;
-      }
-
-      h2 {
-        margin: 24px 0 10px;
-        padding-bottom: 5px;
-        border-bottom: 1px solid var(--line);
-        color: var(--accent);
-        font-size: 15px;
-        letter-spacing: 0;
-      }
-
-      h3 {
-        margin-bottom: 2px;
-        font-size: 15px;
-      }
-
-      p,
-      li {
-        font-size: 13.2px;
-      }
-
-      ul {
-        margin: 7px 0 0;
-        padding-left: 18px;
-      }
-
-      li + li {
-        margin-top: 4px;
-      }
-
-      .topline,
-      .meta,
-      .date {
-        color: var(--muted);
-      }
-
-      .contact {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 6px 12px;
-        margin-top: 8px;
-        color: var(--muted);
-        font-size: 13px;
-      }
-
-      .resume-header {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
-        gap: 20px;
-        align-items: start;
-      }
-
-      .resume-logo {
-        width: 56px;
-        height: 56px;
-        border-radius: 10px;
-      }
-
-      .section-row {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
-        gap: 16px;
-        align-items: baseline;
-      }
-
-      .role {
-        margin-top: 14px;
-      }
-
-      .skills p {
-        margin-bottom: 6px;
-      }
-
-      .project-title {
-        margin-top: 12px;
       }
 
       a {
         color: inherit;
+        text-decoration: none;
+      }
+
+      p,
+      h1,
+      h2,
+      h3 {
+        margin-top: 0;
       }
 
       .actions {
-        width: min(100% - 24px, 920px);
-        margin: 20px auto 0;
+        width: min(100% - 28px, 980px);
+        margin: 18px auto 10px;
         display: flex;
         justify-content: flex-end;
+        gap: 10px;
       }
 
-      button {
+      .actions a,
+      .actions button {
+        min-height: 40px;
         border: 1px solid #cbd5e1;
         border-radius: 8px;
-        padding: 10px 14px;
-        background: #fff;
-        color: #111827;
+        padding: 9px 13px;
+        background: rgba(255, 255, 255, 0.82);
+        color: #172033;
         font: inherit;
-        font-weight: 700;
+        font-size: 13px;
+        font-weight: 800;
         cursor: pointer;
+        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+      }
+
+      .sheet {
+        width: min(100% - 28px, 980px);
+        min-height: 11in;
+        margin: 0 auto 28px;
+        display: grid;
+        grid-template-columns: 260px minmax(0, 1fr);
+        background: var(--paper);
+        box-shadow: var(--shadow);
+      }
+
+      .rail {
+        padding: 30px 24px;
+        color: #f8fafc;
+        background:
+          linear-gradient(150deg, rgba(15, 118, 110, 0.54), transparent 38%),
+          linear-gradient(320deg, rgba(180, 83, 9, 0.26), transparent 42%),
+          var(--sidebar);
+      }
+
+      .mark {
+        width: 62px;
+        height: 62px;
+        margin-bottom: 22px;
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0 14px 32px rgba(0, 0, 0, 0.24);
+      }
+
+      .rail h2,
+      .content h2 {
+        margin: 0 0 9px;
+        color: inherit;
+        font-size: 12px;
+        line-height: 1.1;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+      }
+
+      .rail-section + .rail-section {
+        margin-top: 22px;
+      }
+
+      .contact-list,
+      .skill-list,
+      .quick-list {
+        display: grid;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .contact-list a,
+      .contact-list span {
+        display: block;
+        overflow-wrap: anywhere;
+        color: var(--sidebar-muted);
+        font-size: 12px;
+      }
+
+      .skill-list li {
+        padding: 7px 8px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.07);
+        color: var(--sidebar-muted);
+        font-size: 11.5px;
+        line-height: 1.32;
+      }
+
+      .quick-list li {
+        color: var(--sidebar-muted);
+        font-size: 12px;
+      }
+
+      .quick-list strong {
+        display: block;
+        color: #fff;
+        font-size: 18px;
+        line-height: 1;
+      }
+
+      .content {
+        padding: 30px 34px 28px;
+      }
+
+      .masthead {
+        padding-bottom: 18px;
+        border-bottom: 2px solid var(--line-strong);
+      }
+
+      h1 {
+        margin-bottom: 5px;
+        color: #0f172a;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 42px;
+        line-height: 0.98;
+        letter-spacing: 0;
+      }
+
+      .title {
+        margin-bottom: 11px;
+        color: var(--accent-strong);
+        font-size: 15px;
+        font-weight: 900;
+      }
+
+      .summary {
+        margin: 0;
+        max-width: 640px;
+        color: var(--muted);
+        font-size: 13.2px;
+      }
+
+      .metric-strip {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 9px;
+        margin-top: 14px;
+      }
+
+      .metric {
+        min-height: 58px;
+        padding: 9px 10px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #f7faf9;
+      }
+
+      .metric strong {
+        display: block;
+        color: var(--accent-strong);
+        font-size: 18px;
+        line-height: 1;
+      }
+
+      .metric span {
+        display: block;
+        margin-top: 4px;
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.22;
+      }
+
+      .section {
+        margin-top: 18px;
+      }
+
+      .content h2 {
+        color: var(--accent-strong);
+      }
+
+      .role,
+      .project {
+        break-inside: avoid;
+      }
+
+      .role + .role,
+      .project + .project {
+        margin-top: 13px;
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 12px;
+        align-items: baseline;
+      }
+
+      h3 {
+        margin: 0 0 2px;
+        color: #111827;
+        font-size: 14.2px;
+        line-height: 1.2;
+      }
+
+      .meta,
+      .date {
+        color: var(--soft);
+        font-size: 11.5px;
+      }
+
+      .date {
+        white-space: nowrap;
+      }
+
+      ul {
+        margin: 6px 0 0;
+        padding-left: 18px;
+      }
+
+      li {
+        color: #243044;
+        font-size: 12.25px;
+      }
+
+      li + li {
+        margin-top: 3px;
+      }
+
+      .project h3 {
+        color: var(--accent-strong);
+      }
+
+      .project p {
+        margin: 3px 0 0;
+        color: #243044;
+        font-size: 12.2px;
+      }
+
+      .project .stack {
+        color: var(--soft);
+        font-size: 11.3px;
+        font-weight: 800;
+      }
+
+      .education {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 12px;
+        align-items: baseline;
+      }
+
+      .education p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .print-note {
+        display: none;
+      }
+
+      @page {
+        size: letter;
+        margin: 0.2in;
       }
 
       @media print {
+        html,
         body {
           background: #fff;
-        }
-
-        main {
-          width: 100%;
-          margin: 0;
-          padding: 0;
-          box-shadow: none;
         }
 
         .actions {
           display: none;
         }
 
-        h2 {
-          break-after: avoid;
+        .sheet {
+          width: 100%;
+          min-height: 10.55in;
+          margin: 0;
+          box-shadow: none;
+          grid-template-columns: 2.32in minmax(0, 1fr);
+          line-height: 1.28;
         }
 
-        .role,
-        .project {
-          break-inside: avoid;
-        }
-
-        .resume-logo {
+        .rail {
+          padding: 0.23in 0.19in;
           print-color-adjust: exact;
           -webkit-print-color-adjust: exact;
         }
+
+        .content {
+          padding: 0.23in 0.25in 0.2in;
+        }
+
+        .mark,
+        .metric,
+        .skill-list li {
+          print-color-adjust: exact;
+          -webkit-print-color-adjust: exact;
+        }
+
+        .masthead {
+          padding-bottom: 0.13in;
+          border-bottom-width: 1px;
+        }
+
+        h1 {
+          font-size: 35px;
+        }
+
+        .title {
+          margin-bottom: 8px;
+          font-size: 13px;
+        }
+
+        .summary {
+          font-size: 11.5px;
+        }
+
+        .metric-strip {
+          gap: 6px;
+          margin-top: 10px;
+        }
+
+        .metric {
+          min-height: 45px;
+          padding: 7px 8px;
+        }
+
+        .metric strong {
+          font-size: 15px;
+        }
+
+        .metric span,
+        .meta,
+        .date {
+          font-size: 10.3px;
+        }
+
+        .section {
+          margin-top: 12px;
+        }
+
+        .role + .role,
+        .project + .project {
+          margin-top: 8px;
+        }
+
+        h2 {
+          margin-bottom: 6px;
+          font-size: 10.4px;
+        }
+
+        h3 {
+          font-size: 12.4px;
+        }
+
+        ul {
+          margin-top: 4px;
+          padding-left: 16px;
+        }
+
+        li {
+          font-size: 10.6px;
+          line-height: 1.27;
+        }
+
+        li + li {
+          margin-top: 1px;
+        }
+
+        .project p,
+        .education p {
+          font-size: 10.5px;
+          line-height: 1.27;
+        }
+
+        .project .stack,
+        .contact-list a,
+        .contact-list span,
+        .quick-list li,
+        .skill-list li {
+          font-size: 9.8px;
+        }
+
+        .mark {
+          width: 0.55in;
+          height: 0.55in;
+          margin-bottom: 0.17in;
+        }
+
+        .rail-section + .rail-section {
+          margin-top: 0.18in;
+        }
+
+        .contact-list,
+        .skill-list,
+        .quick-list {
+          gap: 0.055in;
+        }
+
+        .skill-list li {
+          padding: 0.055in 0.065in;
+          border-radius: 6px;
+        }
+
+        .quick-list strong {
+          font-size: 15px;
+        }
       }
 
-      @media (max-width: 700px) {
-        main {
+      @media screen and (max-width: 780px) {
+        .actions {
+          justify-content: stretch;
+        }
+
+        .actions a,
+        .actions button {
+          flex: 1;
+        }
+
+        .sheet {
           width: 100%;
+          min-height: auto;
           margin: 0;
-          padding: 26px 18px;
+          grid-template-columns: 1fr;
         }
 
-        .section-row {
-          grid-template-columns: 1fr;
-          gap: 2px;
+        .rail {
+          padding: 24px 22px;
         }
 
-        .resume-header {
+        .mark {
+          width: 54px;
+          height: 54px;
+          margin-bottom: 16px;
+        }
+
+        .content {
+          padding: 24px 22px 30px;
+        }
+
+        h1 {
+          font-size: 36px;
+        }
+
+        .metric-strip,
+        .row,
+        .education {
           grid-template-columns: 1fr;
+        }
+
+        .date {
+          white-space: normal;
         }
       }
     </style>
   </head>
   <body>
-    <div class="actions">
+    <div class="actions" aria-label="Resume actions">
+      <a href="index.html">Portfolio</a>
+      <a href="Abhey-Deep-Resume.pdf">PDF</a>
       <button type="button" onclick="window.print()">Print / Save PDF</button>
     </div>
 
-    <main>
-      <header class="resume-header">
-        <div>
+    <main class="sheet" aria-label="One-page resume for Abhey Deep">
+      <aside class="rail" aria-label="Contact and skills">
+        <img class="mark" src="assets/logo.svg" alt="Abhey Deep logo">
+
+        <section class="rail-section">
+          <h2>Contact</h2>
+          <ul class="contact-list">
+            <li><a href="mailto:abheyarora6@gmail.com">abheyarora6@gmail.com</a></li>
+            <li><a href="tel:+917986505489">+91 79865 05489</a></li>
+            <li><a href="https://linkedin.com/in/abhey-deep" target="_blank" rel="noopener">linkedin.com/in/abhey-deep</a></li>
+            <li><a href="https://github.com/Abheydeep" target="_blank" rel="noopener">github.com/Abheydeep</a></li>
+            <li><span>India - Open to relocation</span></li>
+          </ul>
+        </section>
+
+        <section class="rail-section">
+          <h2>Core Stack</h2>
+          <ul class="skill-list">
+            <li><strong>Backend:</strong> Java 17, Spring Boot, Spring MVC, REST APIs, microservices, Kafka, concurrency.</li>
+            <li><strong>Frontend:</strong> React, Next.js, TypeScript, Oracle JET, VBCS, HTML5, CSS3.</li>
+            <li><strong>Data:</strong> Oracle DB, PL/SQL, PostgreSQL partitioning, Redis, Supabase, SQL tuning.</li>
+            <li><strong>Delivery:</strong> Docker, OCI, GitHub, Maven, Node.js, Helium CI/CD, JUnit, Mockito.</li>
+          </ul>
+        </section>
+
+        <section class="rail-section">
+          <h2>Strengths</h2>
+          <ul class="quick-list">
+            <li><strong>7+ yrs</strong> enterprise software engineering</li>
+            <li><strong>25%</strong> payroll engine throughput gain</li>
+            <li><strong>4x</strong> faster compensation SQL paths</li>
+            <li><strong>10K+</strong> events/hour production processing</li>
+          </ul>
+        </section>
+
+        <section class="rail-section">
+          <h2>Education</h2>
+          <ul class="quick-list">
+            <li><strong>B.E.</strong> Computer Engineering</li>
+            <li>Thapar Institute of Engineering & Technology, Patiala</li>
+            <li>CGPA 8.31/10</li>
+          </ul>
+        </section>
+      </aside>
+
+      <article class="content">
+        <header class="masthead">
           <h1>Abhey Deep</h1>
-          <p class="topline">Senior Full-Stack Software Engineer | 6+ Years Experience</p>
-          <div class="contact">
-            <span>+91-7986505489</span>
-            <span>abheyarora6@gmail.com</span>
-            <span>linkedin.com/in/abhey-deep</span>
-            <span>github.com/Abheydeep</span>
-            <span>India - Open to relocation</span>
-          </div>
-        </div>
-        <img class="resume-logo" src="assets/logo.svg" alt="Abhey Deep logo">
-      </header>
+          <p class="title">Senior Full-Stack Software Engineer</p>
+          <p class="summary">
+            Senior engineer building backend-heavy product systems across Java, Spring Boot, Oracle, React, and Next.js. Strong record improving payroll engines, modernizing enterprise UI flows, tuning database execution paths, and launching independent products with clean architecture.
+          </p>
 
-      <section>
-        <h2>Professional Summary</h2>
-        <p>
-          Senior Software Engineer with over 6 years of experience architecting, designing, and delivering scalable, high-availability distributed systems. Deep expertise in Java, Spring Boot, microservices architecture, modern full-stack engineering with Next.js and React, and Oracle ecosystem frameworks. Proven track record optimizing high-throughput event-processing engines, driving enterprise UI modernization, and improving database execution paths across large-scale payroll and compensation datasets.
-        </p>
-      </section>
-
-      <section class="skills">
-        <h2>Technical Skills</h2>
-        <p><strong>Core Languages:</strong> Java 17, C++, Python, SQL, PL/SQL, JavaScript ES6+, TypeScript.</p>
-        <p><strong>Backend &amp; Architecture:</strong> Spring Boot, Spring MVC, REST APIs, microservices, event-driven architecture, concurrent programming, Kafka, OOP, SOLID.</p>
-        <p><strong>Frontend:</strong> React, Next.js, Oracle JET, VBCS, HTML5, CSS3, Web Components.</p>
-        <p><strong>Databases &amp; Caching:</strong> Oracle DB, PostgreSQL monthly partitioning, Supabase, Redis, SQL optimization, indexing, AWR reports, query execution plans.</p>
-        <p><strong>DevOps &amp; Practices:</strong> Docker, OCI, Render, Git/GitHub monorepos, Maven, Node.js, Helium CI/CD, JUnit, Mockito, TDD, Agile/Scrum.</p>
-      </section>
-
-      <section>
-        <h2>Professional Experience</h2>
-
-        <article class="role">
-          <div class="section-row">
-            <div>
-              <h3>Senior Software Engineer</h3>
-              <p class="meta">Oracle India Pvt. Ltd. - Gift City, India</p>
+          <div class="metric-strip" aria-label="Selected impact">
+            <div class="metric">
+              <strong>25%</strong>
+              <span>throughput improvement in payroll event processing</span>
             </div>
-            <p class="date">Jan 2024 - Present</p>
-          </div>
-          <ul>
-            <li>Optimized a high-scale event-driven payroll processing engine by redesigning Java thread-pool and batch-processing logic, driving a 25% throughput increase across 10K+ events/hour.</li>
-            <li>Architected RESTful APIs for payroll, absence, and compensation modules, enforcing versioning, pagination, and idempotency to reduce downstream integration latency by 40%.</li>
-            <li>Spearheaded Oracle Fusion HCM UI migration from legacy ADF to Redwood patterns by decomposing ADF managed beans into stateless services and building responsive VBCS pages with Oracle JET components.</li>
-            <li>Executed SQL/PL-SQL performance tuning with EXPLAIN PLAN and AWR reports, redesigning indexes and queries to deliver a 4x execution-time reduction on high-volume compensation datasets.</li>
-            <li>Established clean-code and design-pattern review practices across Strategy and Factory implementations, reducing post-release defect rates by approximately 30%.</li>
-          </ul>
-        </article>
-
-        <article class="role">
-          <div class="section-row">
-            <div>
-              <h3>Software Engineer II</h3>
-              <p class="meta">Oracle India Pvt. Ltd.</p>
+            <div class="metric">
+              <strong>4x</strong>
+              <span>execution-time reduction on high-volume SQL paths</span>
             </div>
-            <p class="date">Nov 2021 - Dec 2023</p>
-          </div>
-          <ul>
-            <li>Developed resilient microservice-style processors for effective-dated HR changes, retroactive payroll calculations, and compensation workflows.</li>
-            <li>Enhanced UI performance through Oracle JET lazy loading and asynchronous JavaScript validations using VBCS action chains.</li>
-            <li>Containerized legacy backend services with Docker and automated deployment workflows via Helium CI/CD pipelines.</li>
-          </ul>
-        </article>
-
-        <article class="role">
-          <div class="section-row">
-            <div>
-              <h3>Software Engineer</h3>
-              <p class="meta">Samsung Research Institute - Noida, India</p>
+            <div class="metric">
+              <strong>3+ hrs/day</strong>
+              <span>manual hardware log processing removed</span>
             </div>
-            <p class="date">Jan 2019 - Nov 2021</p>
           </div>
-          <ul>
-            <li>Engineered kernel-level Android charging features, including the Time-To-Full algorithm, improving charging visibility across flagship device lines.</li>
-            <li>Built Python and Java automation to parse raw device logs into queryable datasets, eliminating over 3 hours of daily manual log processing.</li>
-            <li>Extended the Charging Log Analyzer tool to support emerging charging IC datasets and speed cross-device debugging cycles.</li>
-          </ul>
-        </article>
-      </section>
+        </header>
 
-      <section>
-        <h2>Architectural Projects &amp; Independent Engineering</h2>
+        <section class="section">
+          <h2>Professional Experience</h2>
 
-        <article class="project">
-          <h3 class="project-title">Market Narrative Storyboard Engine | marketnarrative.in | Java 17, Spring Boot, Next.js, React SPA, PostgreSQL, Redis, Docker</h3>
-          <ul>
-            <li>Architected and launched a production-grade automated financial media system as a monorepo aggregating market data, analyzing news sentiment, and publishing source-led pre-market intelligence.</li>
-            <li>Built a Java modular monolith backend integrated with a Next.js public archive optimized for SEO and a private React SPA administrative command center.</li>
-            <li>Engineered narrative clustering that groups financial news into actionable themes and evaluates technical setups for strict 1:2 risk-reward ratios.</li>
-            <li>Implemented PostgreSQL monthly partitioning, Redis caching for sub-minute quote-board updates, permission-claim based admin access, and public archive delivery at marketnarrative.in.</li>
-          </ul>
-        </article>
+          <article class="role">
+            <div class="row">
+              <div>
+                <h3>Senior Software Engineer - Oracle India Pvt. Ltd.</h3>
+                <p class="meta">Gift City, India | Payroll, absence, compensation, enterprise modernization</p>
+              </div>
+              <p class="date">Jan 2024 - Present</p>
+            </div>
+            <ul>
+              <li>Redesigned Java thread-pool and batch-processing logic for a payroll event engine, improving throughput by 25% across 10K+ events/hour.</li>
+              <li>Built Spring REST APIs for payroll, absence, and compensation modules with versioning, pagination, idempotency, and stable integration contracts.</li>
+              <li>Modernized Oracle Fusion HCM UI flows from legacy ADF toward Redwood patterns using stateless services, VBCS, and Oracle JET.</li>
+              <li>Tuned PL/SQL with EXPLAIN PLAN, AWR, indexing changes, and query rewrites, cutting execution time by 4x on compensation datasets.</li>
+            </ul>
+          </article>
 
-        <article class="project">
-          <h3 class="project-title">The Win List (Habit Ledger) | Next.js 15, React 19, TypeScript, Tailwind CSS, Supabase, Render</h3>
-          <ul>
-            <li>Built a production daily-wins app for tracking must-do habits, monthly progress, daily notes, image exports, and editable win ordering across a polished responsive interface.</li>
-            <li>Designed a local-first architecture using browser storage as the instant source of truth with optional Supabase Auth, PostgreSQL, RLS, and backup/restore cloud sync.</li>
-            <li>Implemented a privacy-conscious consent boundary separating sync, analytics, recommendations, and ads personalization while excluding daily notes from segmentation.</li>
-            <li>Modeled aggregate launch metrics through an admin console gated by app_admins and RPC access, exposing adoption and storage signals without leaking user-level notes.</li>
-          </ul>
-        </article>
+          <article class="role">
+            <div class="row">
+              <div>
+                <h3>Software Engineer II - Oracle India Pvt. Ltd.</h3>
+                <p class="meta">Effective-dated HR changes, retro payroll, compensation workflows</p>
+              </div>
+              <p class="date">Nov 2021 - Dec 2023</p>
+            </div>
+            <ul>
+              <li>Developed resilient processors for HR updates, retroactive payroll calculations, and compensation workflows across Fusion HCM modules.</li>
+              <li>Improved Oracle JET and VBCS performance with lazy loading, asynchronous validations, reusable UI patterns, and cleaner action chains.</li>
+              <li>Containerized backend services with Docker and supported release automation through Helium CI/CD pipelines.</li>
+            </ul>
+          </article>
 
-        <article class="project">
-          <h3 class="project-title">System Diagnostics &amp; Performance Analyzer | Java, Docker, OCI, SQL</h3>
-          <ul>
-            <li>Built a backend Java utility to parse application logs, SQL execution latencies, thread utilization, and memory patterns into AWR-style performance summaries without DBA-level access.</li>
-            <li>Containerized the diagnostic engine with Docker and deployed it on OCI for scheduled anomaly detection and internal performance analytics.</li>
-          </ul>
-        </article>
-      </section>
+          <article class="role">
+            <div class="row">
+              <div>
+                <h3>Software Engineer - Samsung Research Institute</h3>
+                <p class="meta">Noida, India | Android charging systems, diagnostics, automation</p>
+              </div>
+              <p class="date">Jan 2019 - Nov 2021</p>
+            </div>
+            <ul>
+              <li>Engineered kernel-level Android charging features, including the Time-To-Full algorithm for flagship device lines.</li>
+              <li>Built Python and Java automation that converted raw logs into queryable datasets, removing 3+ hours of daily manual debugging work.</li>
+            </ul>
+          </article>
+        </section>
 
-      <section>
-        <h2>Education</h2>
-        <p><strong>B.E. Computer Engineering</strong> | Thapar Institute of Engineering &amp; Technology, Patiala (2015 - 2019)</p>
-        <p class="meta">CGPA 8.31/10 | Coursework: Data Structures &amp; Algorithms, Operating Systems, DBMS, Computer Networks, Distributed Systems.</p>
-      </section>
+        <section class="section">
+          <h2>Selected Projects</h2>
+
+          <article class="project">
+            <div class="row">
+              <h3>Market Narrative Storyboard Engine</h3>
+              <p class="date">marketnarrative.in</p>
+            </div>
+            <p class="stack">Java 17, Spring Boot, Next.js, React, PostgreSQL, Redis, Docker</p>
+            <p>Launched a financial media system that aggregates market data, clusters news into source-led themes, evaluates technical setups, and publishes SEO-aware pre-market intelligence through a public archive and React admin studio.</p>
+          </article>
+
+          <article class="project">
+            <div class="row">
+              <h3>The Win List</h3>
+              <p class="date">mywinlist.com</p>
+            </div>
+            <p class="stack">Next.js 15, React 19, TypeScript, Tailwind CSS, Supabase, Render</p>
+            <p>Built a production daily-wins app with local-first tracking, optional Supabase sync, monthly review, editable ordering, image exports, and a privacy-conscious consent boundary for analytics.</p>
+          </article>
+        </section>
+      </article>
     </main>
   </body>
 </html>

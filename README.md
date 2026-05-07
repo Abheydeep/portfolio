@@ -14,7 +14,8 @@ Flagship projects:
 ## Files
 
 - `index.html` - main portfolio page with MarketNews and The Win List architecture case studies.
-- `resume.html` - print-friendly resume page with a browser print/save-to-PDF action.
+- `resume.html` - shareable one-page resume page with a browser print/save-to-PDF action.
+- `Abhey-Deep-Resume.pdf` - generated one-page PDF resume for direct sharing.
 - `assets/logo.svg` - reusable AD systems stamp used across the site, favicon, and resume.
 - `assets/styles.css` - shared portfolio styling.
 - `assets/app.js` - mobile navigation, case-file tabs, canvas sketch, and tiny console easter eggs.
